@@ -1,0 +1,161 @@
+@import 'tailwindcss';
+
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../storage/framework/views/*.php';
+@source '../views/**/*.blade.php';
+
+@theme {
+    --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+
+    /* Palette: Butter Yellow (#F2D887), Warm Cream (#FFF9E9), Powder Blue (#B9C8E8) & High-contrast Text */
+    --color-butter: #F2D887;          /* Butter Yellow Accent */
+    --color-butter-light: #FBF2D5;    /* Butter Yellow Soft Tint */
+    --color-cream: #FFF9E9;           /* Warm Cream Base */
+    --color-cream-light: #FFFDF7;     /* Luminous Cream Canvas */
+    --color-powder: #B9C8E8;          /* Powder Blue */
+    --color-powder-soft: #EDF2FA;     /* Powder Blue Soft Tint */
+    --color-forest-deep: #1F3D2B;     /* Primary deep contrast text */
+    --color-forest-rich: #284E38;     
+    --color-surface-card: #FFFFFF;    /* Crisp card surface */
+}
+
+/* Custom smooth transitions & animations */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Prevent horizontal overflow on mobile */
+body {
+    overflow-x: hidden;
+    background-color: #FFFDF7;
+}
+
+/* Clean Aesthetic Glass & Card Styling with Powder Blue & Butter Yellow accents */
+.clean-card {
+    background: rgba(255, 255, 255, 0.94);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(185, 200, 232, 0.35);
+    box-shadow: 0 4px 20px -2px rgba(185, 200, 232, 0.16), 0 1px 3px 0 rgba(242, 216, 135, 0.08);
+    transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.clean-card:hover {
+    border-color: rgba(242, 216, 135, 0.75);
+    box-shadow: 0 14px 32px -4px rgba(185, 200, 232, 0.28), 0 4px 12px -2px rgba(242, 216, 135, 0.18);
+}
+
+/* Custom Subtle Scrollbar using Warm Cream & Powder Blue */
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: #FFF9E9;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #B9C8E8;
+    border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #F2D887;
+}
+
+/* Netflix-style horizontal scroll row — hidden scrollbar */
+.netflix-scroll {
+    scrollbar-width: none;        /* Firefox */
+    -ms-overflow-style: none;     /* IE/Edge */
+    -webkit-overflow-scrolling: touch;
+    scroll-padding-left: 1rem;
+}
+
+.netflix-scroll::-webkit-scrollbar {
+    display: none;                /* Chrome/Safari */
+}
+
+/* 3D / Layered Carousel Effect with Butter Yellow & Powder Blue Highlights */
+.project-card-item {
+    position: relative;
+    transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1),
+                opacity 0.45s cubic-bezier(0.16, 1, 0.3, 1),
+                border-color 0.45s ease,
+                box-shadow 0.45s ease,
+                filter 0.45s ease;
+    transform-origin: center center;
+    will-change: transform, opacity;
+}
+
+.project-card-item.is-active {
+    transform: scale(1.08);
+    z-index: 30;
+    opacity: 1;
+    border-color: #1F3D2B !important;
+    box-shadow: 0 24px 48px -10px rgba(185, 200, 232, 0.45), 0 0 0 2px #F2D887, 0 0 24px rgba(242, 216, 135, 0.35);
+    filter: none;
+}
+
+.project-card-item:not(.is-active) {
+    transform: scale(0.87);
+    z-index: 10;
+    opacity: 0.55;
+    filter: brightness(0.92) saturate(0.85);
+}
+
+.project-card-item:not(.is-active):hover {
+    opacity: 0.82;
+    transform: scale(0.90);
+    filter: brightness(0.96) saturate(0.92);
+    cursor: pointer;
+}
+
+/* Interactive Parallax & Section Gradient Accents */
+.parallax-orb {
+    will-change: transform;
+    pointer-events: none;
+}
+
+.section-gradient-accent {
+    position: absolute;
+    pointer-events: none;
+    border-radius: 9999px;
+    filter: blur(52px);
+    opacity: 0.8;
+    will-change: transform;
+    z-index: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .parallax-orb,
+    .section-gradient-accent {
+        transform: none !important;
+        transition: none !important;
+    }
+}
+
+/* Interactive Parallax & Section Gradient Accents */
+.parallax-orb {
+    will-change: transform;
+    pointer-events: none;
+}
+
+.section-gradient-accent {
+    position: absolute;
+    pointer-events: none;
+    border-radius: 9999px;
+    filter: blur(52px);
+    opacity: 0.8;
+    will-change: transform;
+    z-index: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .parallax-orb,
+    .section-gradient-accent {
+        transform: none !important;
+        transition: none !important;
+    }
+}
+
