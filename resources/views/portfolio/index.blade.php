@@ -1,22 +1,22 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="space-y-16 sm:space-y-20 lg:space-y-24 w-full max-w-7xl mx-auto">
+<div class="space-y-16 sm:space-y-20 lg:space-y-24 w-full">
 
     <!-- ========================================== -->
     <!-- HERO SECTION (Clean, Modern, Interactive) -->
     <!-- ========================================== -->
-    <section id="hero" class="relative pt-6 sm:pt-10 lg:pt-8 pb-4 sm:pb-6 w-full">
+    <section id="hero" class="relative pt-2 sm:pt-6 lg:pt-8 pb-4 sm:pb-8 w-full">
         <!-- Section Variation Gradient: Butter Yellow Top-Left & Powder Blue Bottom-Right -->
-        <div class="section-gradient-accent -top-16 -left-16 w-80 h-80 bg-[#F2D887]/28" data-speed="0.06"></div>
-        <div class="section-gradient-accent -bottom-10 -right-12 w-96 h-96 bg-[#B9C8E8]/30" data-speed="-0.05"></div>
+        <div class="section-gradient-accent -top-16 -left-16 w-72 sm:w-80 h-72 sm:h-80 bg-[#F2D887]/28" data-speed="0.06"></div>
+        <div class="section-gradient-accent -bottom-10 -right-12 w-72 sm:w-96 h-72 sm:h-96 bg-[#B9C8E8]/30" data-speed="-0.05"></div>
 
         <div class="relative z-10 flex flex-col-reverse lg:flex-row items-center justify-between gap-8 lg:gap-12 w-full">
             <!-- Left Text Content -->
-            <div class="space-y-4 max-w-2xl flex-1 text-left">
+            <div class="space-y-4 max-w-xl lg:max-w-2xl flex-1 w-full flex flex-col items-center lg:items-start text-center lg:text-left">
                 <!-- Status Availability Pill -->
-                <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full text-xs font-bold bg-[#FFF9E9] text-[#1F3D2B] border border-[#F2D887]/70 shadow-2xs">
-                    <span class="relative flex h-2 w-2">
+                <div class="inline-flex items-center gap-1.5 sm:gap-2 px-3 sm:px-3.5 py-1 rounded-full text-xs font-bold bg-[#FFF9E9] text-[#1F3D2B] border border-[#F2D887]/70 shadow-2xs">
+                    <span class="relative flex h-2 w-2 shrink-0">
                         <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#F2D887] opacity-75"></span>
                         <span class="relative inline-flex rounded-full h-2 w-2 bg-[#F2D887] ring-1 ring-[#1F3D2B]/30"></span>
                     </span>
@@ -24,47 +24,30 @@
                 </div>
 
                 <!-- Main Headline -->
-                <div class="space-y-1">
-                    <div class="text-sm font-semibold text-stone-500 tracking-wide">
+                <div class="space-y-1 w-full">
+                    <div class="text-xs sm:text-sm font-semibold text-stone-500 tracking-wide">
                         Hi, I am
                     </div>
-                    <h1 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold text-stone-900 tracking-tight leading-tight">
+                    <h1 class="text-2xl sm:text-4xl lg:text-5xl font-extrabold text-stone-900 tracking-tight leading-tight">
                         {{ $portfolio['personal']['full_name'] }}
                     </h1>
-                    <div class="text-lg sm:text-2xl font-bold text-[#1F3D2B] tracking-tight">
+                    <div class="text-base sm:text-xl lg:text-2xl font-bold text-[#1F3D2B] tracking-tight">
                         Software Engineer
                     </div>
                 </div>
 
                 <!-- Bio Statement -->
-                <p class="text-xs sm:text-sm text-stone-600 leading-relaxed font-normal">
-                    Software Engineering graduate from IPB University. I build web applications with Laravel, design user interfaces in Figma, and analyze systems from requirements to testing.
+                <p class="text-xs sm:text-sm text-stone-600 leading-relaxed font-normal max-w-lg lg:max-w-none">
+                    Software Engineering graduate from IPB University with skills in web development, UI/UX design, and software testing. Experienced in building web applications using Laravel, designing user-friendly interfaces with Figma, and analyzing system requirements.
                 </p>
 
-                <!-- Action CTA Buttons -->
-                <div class="pt-1 flex flex-wrap items-center gap-2.5">
-                    <a href="#contact" class="px-5 py-2.5 rounded-full bg-[#1F3D2B] hover:bg-[#284E38] text-white font-bold text-xs transition-all shadow-sm shadow-[#1F3D2B]/20 flex items-center gap-2 cursor-pointer">
+                <!-- Action CTA Button -->
+                <div class="pt-1 flex items-center justify-center lg:justify-start w-full">
+                    <a href="#contact" class="px-6 py-2.5 rounded-full bg-[#1F3D2B] hover:bg-[#284E38] text-white font-bold text-xs sm:text-sm transition-all shadow-sm shadow-[#1F3D2B]/20 flex items-center gap-2 cursor-pointer active:scale-95">
                         <span>Get in Touch</span>
-                        <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3" />
                         </svg>
-                    </a>
-
-                    <button type="button" onclick="copyToClipboard('{{ $portfolio['personal']['email'] }}', 'Email Tiara')" class="px-4 py-2.5 rounded-full bg-white border border-[#B9C8E8]/60 text-stone-700 hover:border-[#F2D887] hover:bg-[#FFF9E9] text-xs font-bold transition-all shadow-2xs flex items-center gap-2 cursor-pointer group">
-                        <svg class="w-3.5 h-3.5 text-[#1F3D2B] group-hover:scale-110 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
-                        </svg>
-                        <span>Copy Email</span>
-                    </button>
-
-                    <a href="{{ $portfolio['personal']['whatsapp'] }}" target="_blank" rel="noopener" class="px-4 py-2.5 rounded-full bg-[#FFF9E9] hover:bg-[#FDF3D6] text-[#1F3D2B] text-xs font-bold transition-all flex items-center gap-1.5 border border-[#F2D887]/50 shadow-2xs">
-                        <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86.174.086.275.072.376-.044.101-.116.433-.506.549-.68.116-.173.231-.144.39-.086s1.011.477 1.184.564.289.13.332.202c.043.073.043.419-.101.824z"/></svg>
-                        <span>WhatsApp</span>
-                    </a>
-
-                    <a href="{{ $portfolio['personal']['linkedin'] }}" target="_blank" rel="noopener" class="px-4 py-2.5 rounded-full bg-white hover:bg-[#EDF2FA] text-[#1F3D2B] text-xs font-bold transition-all flex items-center gap-1.5 border border-[#B9C8E8]/50 shadow-2xs">
-                        <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
-                        <span>LinkedIn</span>
                     </a>
                 </div>
             </div>
@@ -72,7 +55,7 @@
             <!-- Right Profile Photo Card (With Butter Yellow & Powder Blue Gradient Frame) -->
             <div class="flex justify-center flex-shrink-0 my-2 sm:my-0">
                 <div class="relative flex items-center justify-center p-2">
-                    <div class="w-56 h-56 sm:w-72 sm:h-72 lg:w-80 lg:h-80 rounded-full bg-gradient-to-tr from-[#1F3D2B] via-[#B9C8E8] to-[#F2D887] p-1.5 shadow-xl flex items-center justify-center relative">
+                    <div class="w-48 h-48 sm:w-60 sm:h-60 lg:w-72 lg:h-72 rounded-full bg-gradient-to-tr from-[#1F3D2B] via-[#B9C8E8] to-[#F2D887] p-1.5 shadow-xl flex items-center justify-center relative">
                         <!-- Inner Soft Circle Canvas -->
                         <div class="w-full h-full rounded-full bg-gradient-to-b from-[#FFF9E9] via-white to-[#EDF2FA] overflow-hidden relative flex items-end justify-center">
                             <img 
@@ -83,13 +66,13 @@
                             >
                         </div>
 
-                        <!-- Floating Badges with Safe Margins -->
-                        <div class="absolute top-1 left-0 sm:-top-1 sm:-left-1 px-3 py-1 rounded-full bg-white/95 backdrop-blur-md border border-[#B9C8E8]/40 text-[11px] font-bold text-[#1F3D2B] shadow-sm flex items-center gap-1.5 z-10">
-                            <span class="w-2 h-2 rounded-full bg-[#F2D887] ring-1 ring-[#B9C8E8] animate-pulse"></span>
+                        <!-- Floating Badges with Safe Relative Margins -->
+                        <div class="absolute top-1 left-0 sm:top-1 sm:-left-2 px-2.5 sm:px-3 py-0.5 sm:py-1 rounded-full bg-white/95 backdrop-blur-md border border-[#B9C8E8]/40 text-[10px] sm:text-[11px] font-bold text-[#1F3D2B] shadow-sm flex items-center gap-1.5 z-10 whitespace-nowrap">
+                            <span class="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-[#F2D887] ring-1 ring-[#B9C8E8] animate-pulse"></span>
                             <span>IPB Graduate '26</span>
                         </div>
 
-                        <div class="absolute bottom-1 right-0 sm:-bottom-1 sm:-right-1 px-3.5 py-1 rounded-full bg-white/95 backdrop-blur-md border border-[#F2D887]/50 text-[11px] font-bold text-[#1F3D2B] shadow-sm z-10">
+                        <div class="absolute bottom-1 right-0 sm:bottom-1 sm:-right-2 px-3 sm:px-3.5 py-0.5 sm:py-1 rounded-full bg-white/95 backdrop-blur-md border border-[#F2D887]/50 text-[10px] sm:text-[11px] font-bold text-[#1F3D2B] shadow-sm z-10 whitespace-nowrap">
                             📍 Bogor
                         </div>
                     </div>
@@ -107,7 +90,7 @@
 
         <div class="relative z-10 flex flex-col sm:flex-row sm:items-end justify-between gap-1 border-b border-[#B9C8E8]/35 pb-3">
             <div>
-                <h2 class="text-2xl sm:text-3xl font-extrabold text-stone-900 tracking-tight">
+                <h2 class="text-xl sm:text-2xl lg:text-3xl font-extrabold text-stone-900 tracking-tight">
                     Education
                 </h2>
             </div>
@@ -154,7 +137,7 @@
 
         <div class="relative z-10 flex flex-col sm:flex-row sm:items-end justify-between gap-1 border-b border-[#B9C8E8]/35 pb-3">
             <div>
-                <h2 class="text-2xl sm:text-3xl font-extrabold text-stone-900 tracking-tight">
+                <h2 class="text-xl sm:text-2xl lg:text-3xl font-extrabold text-stone-900 tracking-tight">
                     Organizational Experience
                 </h2>
             </div>
@@ -166,9 +149,9 @@
         <div class="relative z-10 space-y-4 w-full">
             @foreach($portfolio['organisations'] as $org)
                 <div class="clean-card p-5 sm:p-6 rounded-2xl bg-white border border-[#B9C8E8]/35 hover:border-[#F2D887]/70 transition-all">
-                    <div class="flex flex-col sm:flex-row gap-5 items-center">
+                    <div class="flex flex-col sm:flex-row gap-5 items-start sm:items-center">
                         <!-- Left Featured Photo -->
-                        <div class="w-full sm:w-56 md:w-60 lg:w-64 flex-shrink-0">
+                        <div class="w-full sm:w-52 md:w-56 lg:w-64 flex-shrink-0">
                             <div class="group relative aspect-4/3 rounded-xl overflow-hidden bg-stone-100 border border-[#B9C8E8]/40 shadow-2xs">
                                 <img 
                                     src="{{ asset('images/omvi-team.jpg') }}" 
@@ -251,7 +234,7 @@
 
         <div class="relative z-10 flex flex-col sm:flex-row sm:items-end justify-between gap-1 border-b border-[#B9C8E8]/35 pb-3">
             <div>
-                <h2 class="text-2xl sm:text-3xl font-extrabold text-stone-900 tracking-tight">
+                <h2 class="text-xl sm:text-2xl lg:text-3xl font-extrabold text-stone-900 tracking-tight">
                     Work &amp; Internship Experience
                 </h2>
             </div>
@@ -270,39 +253,41 @@
         <div class="relative z-10 w-full">
             <div id="exp-scroll-container" class="netflix-scroll flex items-stretch gap-3.5 sm:gap-4 overflow-x-auto pb-3 pt-1 snap-x snap-mandatory cursor-grab active:cursor-grabbing select-none">
                 @foreach($portfolio['experiences'] as $index => $exp)
-                    <div class="snap-start flex-shrink-0 w-[275px] sm:w-[295px] clean-card p-4 rounded-2xl {{ $index % 2 === 0 ? 'border-t-3 border-t-[#B9C8E8]' : 'border-t-3 border-t-[#F2D887]' }} bg-white border border-[#B9C8E8]/35 flex flex-col justify-between shadow-2xs hover:shadow-sm transition-all h-[280px]">
-                        <div class="flex flex-col h-full">
-                            <!-- Top Section: Period + Role + Company -->
-                            <div>
-                                <div class="flex items-center justify-between text-xs gap-1.5 mb-2">
-                                    <span class="font-mono font-bold px-2 py-0.5 rounded-full bg-[#FFF9E9] text-[#1F3D2B] border border-[#F2D887]/60 whitespace-nowrap text-[10px] shadow-2xs">
-                                        {{ $exp['period'] }}
-                                    </span>
-                                    <span class="text-stone-500 font-semibold text-[10px] px-2 py-0.5 rounded bg-[#EDF2FA] border border-[#B9C8E8]/40">
-                                        {{ $exp['type'] }}
-                                    </span>
-                                </div>
+                    <div class="snap-start flex-shrink-0 w-[min(300px,85vw)] sm:w-[315px] clean-card p-3.5 sm:p-4 rounded-2xl {{ $index % 2 === 0 ? 'border-t-3 border-t-[#B9C8E8]' : 'border-t-3 border-t-[#F2D887]' }} bg-white border border-[#B9C8E8]/35 flex flex-col shadow-2xs hover:shadow-sm transition-all">
+                        
+                        <!-- Header Zone 1: Period Date Badge & Job Type -->
+                        <div class="flex items-center justify-between text-xs gap-1.5 min-h-[22px]">
+                            <span class="font-mono font-bold px-2.5 py-0.5 rounded-full bg-[#FFF9E9] text-[#1F3D2B] border border-[#F2D887]/60 whitespace-nowrap text-[10px] shadow-2xs">
+                                {{ $exp['period'] }}
+                            </span>
+                            <span class="text-stone-500 font-semibold text-[10px] px-2 py-0.5 rounded bg-[#EDF2FA] border border-[#B9C8E8]/40 whitespace-nowrap">
+                                {{ $exp['type'] }}
+                            </span>
+                        </div>
 
-                                <div class="min-h-[42px] flex flex-col justify-center">
-                                    <h3 class="text-xs sm:text-sm font-extrabold text-stone-900 leading-snug line-clamp-1">
-                                        {{ $exp['role'] }}
-                                    </h3>
-                                    <div class="text-[11px] font-bold text-[#1F3D2B] mt-0.5 truncate">
-                                        {{ $exp['company'] }} • {{ $exp['location'] }}
-                                    </div>
-                                </div>
+                        <!-- Header Zone 2: Title & Company with Tight, Exact Aligned Height -->
+                        <div class="mt-2 min-h-[50px] sm:min-h-[52px] flex flex-col justify-start">
+                            <h3 class="text-xs sm:text-sm font-extrabold text-stone-900 leading-snug">
+                                {{ $exp['role'] }}
+                            </h3>
+                            <div class="text-[11px] font-bold text-[#1F3D2B] mt-0.5 leading-snug">
+                                {{ $exp['company'] }} • {{ $exp['location'] }}
                             </div>
+                        </div>
 
-                            <!-- Bottom Section: Bullet Points -->
-                            <div class="space-y-1.5 pt-2 mt-1.5 border-t border-stone-100 flex-1 flex flex-col justify-center">
+                        <!-- Divider at Exact Same Vertical Position with Reduced Gap -->
+                        <div class="pt-2 border-t border-stone-100 flex-1 flex flex-col">
+                            <!-- Bullet Points Responsibilities -->
+                            <div class="space-y-1.5">
                                 @foreach($exp['points'] as $point)
-                                    <div class="flex items-start gap-1.5 text-[11px] text-stone-600 leading-snug">
-                                        <span class="text-[#1F3D2B] font-bold shrink-0">•</span>
-                                        <span class="line-clamp-2">{{ $point }}</span>
+                                    <div class="flex items-start gap-1.5 text-[11px] text-stone-600 leading-relaxed">
+                                        <span class="text-[#1F3D2B] font-bold shrink-0 mt-0.5">•</span>
+                                        <span>{{ $point }}</span>
                                     </div>
                                 @endforeach
                             </div>
                         </div>
+
                     </div>
                 @endforeach
             </div>
@@ -312,18 +297,15 @@
     <!-- ========================================== -->
     <!-- 4. PROJECT EXPERIENCE — Focused Carousel -->
     <!-- ========================================== -->
-    <section id="projects" class="relative scroll-mt-24 space-y-6 w-full">
+    <section id="projects" class="relative scroll-mt-24 space-y-3 sm:space-y-4 w-full">
         <!-- Section Variation Gradient: Focal Halo behind Carousel Stage -->
         <div class="section-gradient-accent top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[44rem] h-84 bg-[radial-gradient(ellipse,_var(--tw-gradient-stops))] from-[#F2D887]/22 via-[#B9C8E8]/18 to-transparent" data-speed="0.03"></div>
 
-        <div class="relative z-10 flex flex-col sm:flex-row sm:items-end justify-between gap-1 border-b border-[#B9C8E8]/35 pb-3">
+        <div class="relative z-10 flex flex-col sm:flex-row sm:items-end justify-between gap-1 border-b border-[#B9C8E8]/35 pb-2.5">
             <div>
-                <h2 class="text-2xl sm:text-3xl font-extrabold text-stone-900 tracking-tight">
+                <h2 class="text-xl sm:text-2xl lg:text-3xl font-extrabold text-stone-900 tracking-tight">
                     Project Experience
                 </h2>
-                <p class="text-xs font-semibold text-[#1F3D2B] mt-0.5">
-                    Production systems, user experience designs &amp; interactive solutions
-                </p>
             </div>
 
             <!-- Action Controls: Prev/Next Carousel Arrows -->
@@ -337,165 +319,98 @@
             </div>
         </div>
 
-        <!-- Horizontal Carousel Stage with Perspective & Depth Padding -->
-        <div class="relative z-10 w-full overflow-hidden py-4 sm:py-6">
-            <div class="netflix-scroll flex items-center gap-4 sm:gap-6 overflow-x-auto py-8 px-[8vw] sm:px-[18vw] cursor-grab active:cursor-grabbing select-none" id="projects-grid">
-                @php
-                    $projectVisuals = [
-                        'setda-depok-diklat' => [
-                            'tag' => 'WEB & GOV SYSTEM',
-                            'laptop_screen' => 'bg-gradient-to-br from-[#1F3D2B] via-[#2A4D37] to-[#162C1F]',
-                            'header_title' => 'Portal Diklat & SKJ',
-                            'header_sub' => 'Sistem Pemkot Depok',
-                            'badge' => '🏛️ Production',
-                            'preview_lines' => ['Perencanaan Pelatihan ASN', 'Database Standar Kompetensi', 'Black Box Tested & Live']
-                        ],
-                        'susu-bahagia' => [
-                            'tag' => 'UI/UX & E-COMMERCE',
-                            'laptop_screen' => 'bg-gradient-to-br from-[#244733] via-[#335C43] to-[#1A3324]',
-                            'header_title' => 'Susu Bahagia',
-                            'header_sub' => 'Dairy Store UI/UX',
-                            'badge' => '🛒 Interactive Prototype',
-                            'preview_lines' => ['Waterfall SDLC Design', 'Responsive Web & Mobile', 'Figma High-Fidelity']
-                        ],
-                        'timun-mas-ar' => [
-                            'tag' => 'AR & 3D INTERACTIVE',
-                            'laptop_screen' => 'bg-gradient-to-br from-[#1F3D2B] via-[#2D543C] to-[#142A1D]',
-                            'header_title' => 'Timun Mas AR',
-                            'header_sub' => 'Cultural Learning App',
-                            'badge' => '📱 3D Card Scan',
-                            'preview_lines' => ['Unity Mobile Camera Engine', 'Blender 3D Character Rig', 'Interactive Card Tracker']
-                        ],
-                        'arabic-sign-language' => [
-                            'tag' => 'MACHINE LEARNING',
-                            'laptop_screen' => 'bg-gradient-to-br from-[#1C3627] via-[#2A4E38] to-[#12251A]',
-                            'header_title' => 'Arabic Sign AI',
-                            'header_sub' => 'Hand Gesture Classifier',
-                            'badge' => '🎯 86% Validation Acc',
-                            'preview_lines' => ['MobileNetV2 Deep Learning', 'Realtime Computer Vision', 'Data Augmentation Pipeline']
-                        ],
-                        'connection-bracelet' => [
-                            'tag' => 'WEB DEVELOPMENT',
-                            'laptop_screen' => 'bg-gradient-to-br from-[#264D36] via-[#356347] to-[#1B3626]',
-                            'header_title' => 'Connection',
-                            'header_sub' => 'Digital Barcode Web',
-                            'badge' => '🌐 Live Hosted',
-                            'preview_lines' => ['Interactive QR/Barcode Sync', 'Responsive Mobile First', 'Fast Load Optimization']
-                        ],
-                        'restaurant-ui-systems' => [
-                            'tag' => 'UI/UX & POS SYSTEM',
-                            'laptop_screen' => 'bg-gradient-to-br from-[#1E3A2B] via-[#2F593E] to-[#162B1F]',
-                            'header_title' => 'Verdant Order UI',
-                            'header_sub' => 'Kitchen & POS Design',
-                            'badge' => '⚡ Order Efficiency',
-                            'preview_lines' => ['POS Cashier Workflow', 'Real-time Kitchen Interface', 'Figma Design System']
-                        ],
-                    ];
-                @endphp
-
+        <!-- Horizontal Carousel Stage with Coverflow Perspective & Depth Padding -->
+        <div class="relative z-10 w-full overflow-hidden py-2">
+            <div class="netflix-scroll flex items-center gap-4 sm:gap-6 md:gap-7 overflow-x-auto py-8 sm:py-10 md:py-12 px-[6vw] min-[400px]:px-[10vw] sm:px-[20vw] md:px-[26vw] lg:px-[30vw] cursor-grab active:cursor-grabbing select-none" id="projects-grid">
                 @foreach($portfolio['projects'] as $index => $project)
                     @php
-                        $visual = $projectVisuals[$project['id']] ?? [
-                            'tag' => 'DIGITAL PROJECT',
-                            'laptop_screen' => 'bg-gradient-to-br from-[#1F3D2B] to-[#162C1F]',
-                            'header_title' => $project['title'],
-                            'header_sub' => 'System Showcase',
-                            'badge' => '✨ Verified',
-                            'preview_lines' => ['Modern Architecture', 'Clean Interface', 'User Tested']
-                        ];
+                        $tags = $project['technology'] ?? $project['tags'] ?? [];
+                        $hasUrl = !empty($project['url']) && !in_array(strtolower(trim($project['url'])), ['#', 'internal', 'internal / not publicly available', 'none']);
                     @endphp
-                    <div class="project-card-item flex-shrink-0 w-[290px] sm:w-[340px] md:w-[360px] rounded-3xl overflow-hidden bg-white text-stone-900 border border-[#B9C8E8]/40 flex flex-col justify-between shadow-sm cursor-pointer {{ $index === 0 ? 'is-active' : '' }}" data-project-index="{{ $index }}">
+                    <div class="project-card-item flex-shrink-0 w-[260px] min-[380px]:w-[285px] sm:w-[330px] md:w-[350px] max-w-[85vw] rounded-2xl overflow-hidden bg-white text-stone-900 border border-[#B9C8E8]/45 flex flex-col justify-between shadow-xs cursor-pointer select-none {{ $index === 0 ? 'is-active' : '' }}" data-project-index="{{ $index }}">
                         
-                        <!-- Top Image Layer: Layered Device Presentation with Category Badge on Top-Right -->
-                        <div class="relative bg-gradient-to-b from-[#FFFDF7] to-stone-50 p-4 pt-3.5 pb-2 border-b border-stone-200/80">
-                            <!-- Category Badge on Top-Right Layer -->
-                            <div class="flex items-center justify-end mb-2.5">
-                                <span class="px-2.5 py-0.5 rounded-md font-mono text-[9px] font-extrabold uppercase bg-[#FFF9E9] text-[#1F3D2B] border border-[#F2D887]/60 shadow-2xs">
-                                    {{ $visual['tag'] }}
-                                </span>
-                            </div>
-
-                            <!-- Layered Laptop Device Graphic with Screen Content -->
-                            <div class="relative mx-auto w-full bg-white rounded-t-xl border border-stone-300/80 p-2 shadow-md transition-transform duration-500">
-                                <!-- Camera Dot -->
-                                <div class="w-1.5 h-1.5 rounded-full bg-stone-400 mx-auto mb-1.5"></div>
-
-                                <!-- Screen Display Canvas with UI Elements -->
-                                <div class="h-32 rounded-lg overflow-hidden {{ $visual['laptop_screen'] }} p-2.5 flex flex-col justify-between text-white relative shadow-inner">
-                                    <div class="flex items-center justify-between text-[9px] border-b border-white/15 pb-1">
-                                        <div class="flex items-center gap-1.5 font-bold tracking-tight">
-                                            <span class="w-1.5 h-1.5 rounded-full bg-[#F2D887] animate-pulse"></span>
-                                            <span>{{ $visual['header_title'] }}</span>
+                        <!-- Top Image Layer: 16:9 Aspect Ratio with Floating Category Pill on Top-Right -->
+                        <div class="relative p-2.5 sm:p-3 bg-gradient-to-b from-[#FFFDF7] to-stone-50 border-b border-stone-100">
+                            <!-- 16:9 Image Placeholder / Screenshot Canvas -->
+                            <div class="relative w-full aspect-16/9 rounded-xl overflow-hidden border border-[#B9C8E8]/40 bg-gradient-to-br from-[#FFF9E9] via-[#FAF6ED] to-[#EDF2FA] flex items-center justify-center shadow-inner">
+                                @if(!empty($project['image']))
+                                    <img 
+                                        src="{{ asset('images/projects/' . $project['image']) }}" 
+                                        alt="{{ $project['title'] }}" 
+                                        class="w-full h-full object-cover"
+                                        loading="lazy"
+                                    >
+                                @else
+                                    <!-- Clean Architectural Preview Graphic -->
+                                    <div class="flex flex-col items-center justify-center gap-1 p-2 text-center w-full h-full select-none">
+                                        <div class="w-7 h-7 rounded-lg bg-white/95 border border-[#B9C8E8]/50 flex items-center justify-center text-[#1F3D2B] shadow-2xs">
+                                            <svg class="w-3.5 h-3.5 opacity-75" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                                            </svg>
                                         </div>
-                                        <span class="text-[8px] font-mono px-1.5 py-0.2 rounded bg-white/20 text-white font-semibold">
-                                            {{ $visual['badge'] }}
+                                        <span class="text-[8.5px] font-mono font-bold text-[#1F3D2B]/75 tracking-wider uppercase">
+                                            Project Preview
                                         </span>
                                     </div>
+                                    <div class="absolute inset-1.5 rounded-lg border border-dashed border-[#F2D887]/55 pointer-events-none"></div>
+                                @endif
 
-                                    <!-- Screen Interior Highlights -->
-                                    <div class="space-y-1 my-auto">
-                                        <div class="text-[12px] font-extrabold text-[#FFF9E9] leading-tight">
-                                            {{ $visual['header_sub'] }}
-                                        </div>
-                                        <div class="space-y-0.5">
-                                            @foreach($visual['preview_lines'] as $line)
-                                                <div class="text-[9px] text-stone-200 flex items-center gap-1 font-medium leading-none">
-                                                    <span class="text-[#F2D887] text-[9px]">›</span>
-                                                    <span class="truncate">{{ $line }}</span>
-                                                </div>
-                                            @endforeach
-                                        </div>
-                                    </div>
-
-                                    <div class="flex items-center justify-between text-[8px] text-stone-300 font-mono pt-1 border-t border-white/15">
-                                        <span>UI/UX &amp; Codebase</span>
-                                        <span class="text-[#F2D887] font-semibold">Active Build</span>
-                                    </div>
+                                <!-- Category Badge Floating Overlay -->
+                                <div class="absolute top-2 right-2 px-2.5 py-0.5 rounded-full font-mono text-[8.5px] font-extrabold uppercase bg-[#FFF9E9]/95 text-[#1F3D2B] border border-[#F2D887]/70 shadow-2xs backdrop-blur-xs">
+                                    {{ $project['category'] }}
                                 </div>
                             </div>
-                            <!-- Laptop Base Plate -->
-                            <div class="w-[88%] h-2 bg-stone-300/90 rounded-b-md mx-auto shadow-sm"></div>
                         </div>
 
-                        <!-- Bottom Content Section in Light Theme -->
-                        <div class="p-4 sm:p-5 flex-1 flex flex-col justify-between space-y-3 bg-white">
-                            <div class="space-y-2">
-                                <h3 class="text-base sm:text-lg font-black text-stone-900 tracking-tight leading-snug line-clamp-1 uppercase">
-                                    {{ $project['title'] }}
-                                </h3>
+                        <!-- Bottom Content Section -->
+                        <div class="p-3 sm:p-3.5 flex-1 flex flex-col justify-between bg-white">
+                            <div class="flex flex-col">
+                                <!-- Project Title: Bold uppercase, wrapped naturally -->
+                                <div>
+                                    <h3 class="text-xs sm:text-[13px] font-black text-stone-900 tracking-tight leading-snug uppercase">
+                                        {{ $project['title'] }}
+                                    </h3>
+                                </div>
 
-                                <!-- Pill Tags -->
-                                <div class="flex flex-wrap gap-1.5">
-                                    @foreach(array_slice($project['tags'], 0, 5) as $tag)
-                                        <span class="px-2 py-0.5 rounded-md text-[9px] font-bold font-mono border bg-stone-50 text-stone-700 border-stone-200">
+                                <!-- Technology Tags: Exactly 8-10px gap from title (mt-2.5 = 10px) -->
+                                <div class="mt-2.5 flex flex-wrap gap-1">
+                                    @foreach(array_slice($tags, 0, 4) as $tag)
+                                        <span class="px-2 py-0.5 rounded-md text-[8.5px] font-bold font-mono border bg-[#FFF9E9]/70 text-[#1F3D2B] border-[#F2D887]/40 shadow-2xs">
                                             {{ $tag }}
                                         </span>
                                     @endforeach
                                 </div>
 
-                                <p class="text-[11px] text-stone-600 leading-relaxed font-normal line-clamp-3 pt-1">
-                                    {{ $project['description'] }}
-                                </p>
+                                <!-- Project Description (Compact container with natural line height) -->
+                                <div class="mt-2.5">
+                                    <p class="text-[10.5px] text-stone-600 leading-relaxed font-normal">
+                                        {{ $project['description'] }}
+                                    </p>
+                                </div>
                             </div>
 
-                            <!-- Footer Links -->
-                            <div class="pt-3 border-t border-stone-100 flex items-center justify-between text-xs">
-                                <div class="flex items-center gap-3">
-                                    <a href="{{ $project['demo_url'] }}" target="_blank" rel="noopener" class="inline-flex items-center gap-1 font-bold text-[#1F3D2B] hover:text-[#284E38] transition-colors text-[11px]">
-                                        <i class="bi bi-globe2 text-xs"></i>
-                                        <span>Live Demo</span>
+                            <!-- Footer: Aligned neatly at the bottom -->
+                            <div class="pt-2 mt-3 border-t border-stone-100 flex items-center justify-between text-xs min-h-[1.75rem]">
+                                @if($hasUrl)
+                                    <a 
+                                        href="{{ $project['url'] }}" 
+                                        target="_blank" 
+                                        rel="noopener noreferrer" 
+                                        class="inline-flex items-center gap-1 font-bold text-[#1F3D2B] hover:text-[#284E38] transition-colors text-[10.5px] group/link py-0.5"
+                                    >
+                                        <span>View Project</span>
+                                        <svg class="w-3 h-3 group-hover/link:translate-x-0.5 group-hover/link:-translate-y-0.5 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                                        </svg>
                                     </a>
-                                    <a href="{{ $project['github_url'] }}" target="_blank" rel="noopener" class="inline-flex items-center gap-1 font-bold text-stone-500 hover:text-[#1F3D2B] transition-colors text-[11px]">
-                                        <i class="bi bi-github text-xs"></i>
-                                        <span>GitHub</span>
-                                    </a>
-                                </div>
-
-                                <a href="{{ $project['demo_url'] }}" target="_blank" rel="noopener" class="w-7 h-7 rounded-lg bg-stone-50 border border-stone-200 hover:border-[#F2D887] hover:bg-[#FFF9E9] text-stone-600 hover:text-[#1F3D2B] flex items-center justify-center transition-colors shadow-2xs" title="Open Project Details">
-                                    <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                                    </svg>
-                                </a>
+                                    <!-- Subtle External Link Icon on Right -->
+                                    <span class="text-stone-300 text-xs pointer-events-none">↗</span>
+                                @else
+                                    <span class="text-[9.5px] font-mono text-stone-400 font-semibold italic">
+                                        Internal Project
+                                    </span>
+                                    <span class="text-[9.5px] font-mono text-stone-300 pointer-events-none">🔒</span>
+                                @endif
                             </div>
                         </div>
                     </div>
@@ -526,7 +441,7 @@
 
         <div class="relative z-10 flex flex-col sm:flex-row sm:items-end justify-between gap-1 border-b border-[#B9C8E8]/35 pb-3">
             <div>
-                <h2 class="text-2xl sm:text-3xl font-extrabold text-stone-900 tracking-tight">
+                <h2 class="text-xl sm:text-2xl lg:text-3xl font-extrabold text-stone-900 tracking-tight">
                     Certifications &amp; Achievements
                 </h2>
             </div>
@@ -535,48 +450,65 @@
             </p>
         </div>
 
-        <div class="relative z-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 w-full">
+        <div class="relative z-10 grid grid-cols-1 min-[540px]:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5 w-full items-stretch">
             @foreach($portfolio['certifications'] as $index => $cert)
                 @php
                     $icons = ['National' => '🏛️', 'Achievement' => '🥈', 'Professional' => '🎨', 'Leadership' => '⭐'];
                     $icon = $icons[$cert['badge'] ?? ''] ?? '📜';
+                    $certFile = !empty($cert['file']) ? asset('images/certificates/' . $cert['file']) : (!empty($cert['image']) ? asset('images/certificates/' . $cert['image']) : '');
+                    $certImage = !empty($cert['image']) ? asset('images/certificates/' . $cert['image']) : $certFile;
+                    $isPdf = !empty($cert['file']) && str_ends_with(strtolower($cert['file']), '.pdf');
                 @endphp
 
-                <div class="group bg-white rounded-3xl border border-[#B9C8E8]/35 overflow-hidden flex flex-col justify-between hover:border-[#F2D887]/80 hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300">
+                <div 
+                    class="group clean-card bg-white rounded-2xl border border-[#B9C8E8]/35 overflow-hidden flex flex-col hover:border-[#F2D887]/80 hover:shadow-md hover:-translate-y-0.5 transition-all duration-300 cursor-pointer"
+                    onclick="openCertificateModal('{{ $certImage }}', '{{ $certFile }}', {{ $isPdf ? 'true' : 'false' }}, '{{ addslashes($cert['title']) }}', '{{ addslashes($cert['issuer']) }}', '{{ $cert['badge'] ?? '' }}')"
+                    role="button"
+                    tabindex="0"
+                    onkeydown="if(event.key==='Enter'||event.key===' ') { event.preventDefault(); this.click(); }"
+                >
 
-                    {{-- Title & Issuer Only --}}
-                    <div class="p-5 pb-3 space-y-1">
-                        <h3 class="text-sm font-extrabold text-stone-900 leading-snug">
-                            {{ $cert['title'] }}
-                        </h3>
-                        <p class="text-xs text-[#1F3D2B] font-semibold leading-tight">
-                            {{ $cert['issuer'] }}
-                        </p>
-                    </div>
-
-                    {{-- Certificate Image Box --}}
-                    <div class="mx-4 mb-4 rounded-2xl overflow-hidden border border-[#B9C8E8]/35 flex-1 min-h-[180px] flex items-center justify-center bg-gradient-to-br from-[#FFF9E9] via-[#FAF6ED] to-[#EDF2FA] relative">
+                    {{-- Top Certificate Image Box with Compact Container Height & Original Proportions --}}
+                    <div class="relative w-full aspect-16/9 bg-gradient-to-br from-[#FFF9E9]/90 via-[#FAF6ED] to-[#EDF2FA]/80 p-2 sm:p-2.5 flex items-center justify-center border-b border-[#B9C8E8]/25 overflow-hidden">
                         @if(!empty($cert['image']))
                             <img
                                 src="{{ asset('images/certificates/' . $cert['image']) }}"
                                 alt="Certificate – {{ $cert['title'] }}"
-                                class="w-full h-full object-contain object-center"
+                                class="w-full h-full object-contain drop-shadow-2xs group-hover:scale-[1.03] transition-transform duration-300"
                                 loading="lazy"
                             >
                         @else
-                            <div class="flex flex-col items-center justify-center gap-2 px-5 py-8 text-center w-full">
-                                <div class="w-12 h-12 rounded-2xl bg-white border border-[#B9C8E8]/40 flex items-center justify-center text-xl shadow-sm">
+                            <div class="flex flex-col items-center justify-center gap-1 text-center w-full">
+                                <div class="w-8 h-8 rounded-xl bg-white border border-[#B9C8E8]/40 flex items-center justify-center text-sm shadow-2xs">
                                     {{ $icon }}
                                 </div>
-                                <div class="space-y-0.5">
-                                    <p class="text-[10px] font-mono font-bold text-[#1F3D2B]/70 uppercase tracking-wider">{{ $cert['badge'] }} Certificate</p>
-                                    <p class="text-[9px] text-stone-400 font-medium leading-relaxed">
-                                        Verified Credential
-                                    </p>
-                                </div>
-                                <div class="absolute inset-3 rounded-xl border border-dashed border-[#F2D887]/50 pointer-events-none"></div>
+                                <span class="text-[9px] font-mono font-bold text-[#1F3D2B]/70 uppercase tracking-wider">{{ $cert['badge'] }}</span>
                             </div>
                         @endif
+
+                        {{-- Category Badge with Balanced & Consistent Padding --}}
+                        <div class="absolute top-2 right-2 px-2.5 py-1 rounded-full bg-white/95 backdrop-blur-xs border border-[#B9C8E8]/40 text-[9px] font-mono font-bold text-[#1F3D2B] shadow-2xs pointer-events-none tracking-wide">
+                            {{ $cert['badge'] }}
+                        </div>
+                    </div>
+
+                    {{-- Title and Issuer Below the Image --}}
+                    <div class="p-3.5 sm:p-4 flex-1 flex flex-col justify-between space-y-2.5 bg-white">
+                        <div class="space-y-1">
+                            <h3 class="text-xs sm:text-sm font-extrabold text-stone-900 leading-snug line-clamp-2" title="{{ $cert['title'] }}">
+                                {{ $cert['title'] }}
+                            </h3>
+                            <p class="text-[10px] sm:text-[10.5px] text-[#1F3D2B] font-semibold leading-tight line-clamp-2" title="{{ $cert['issuer'] }}">
+                                {{ $cert['issuer'] }}
+                            </p>
+                        </div>
+
+                        <div class="pt-2.5 mt-auto border-t border-stone-100 flex items-center justify-between gap-2 text-[10px] font-mono">
+                            <span class="text-stone-400 font-semibold truncate">{{ $cert['year'] ?? 'Verified' }}</span>
+                            <span class="text-[#1F3D2B] font-bold shrink-0 inline-flex items-center group-hover:text-[#284E38] transition-colors">
+                                View ↗
+                            </span>
+                        </div>
                     </div>
                 </div>
             @endforeach
@@ -593,7 +525,7 @@
 
         <div class="relative z-10 flex flex-col sm:flex-row sm:items-end justify-between gap-1 border-b border-[#B9C8E8]/35 pb-3">
             <div>
-                <h2 class="text-2xl sm:text-3xl font-extrabold text-stone-900 tracking-tight">
+                <h2 class="text-xl sm:text-2xl lg:text-3xl font-extrabold text-stone-900 tracking-tight">
                     Skills &amp; Software Stack
                 </h2>
             </div>
@@ -734,7 +666,7 @@
 
         <div class="relative z-10 flex flex-col sm:flex-row sm:items-end justify-between gap-1 border-b border-[#B9C8E8]/35 pb-3">
             <div>
-                <h2 class="text-2xl sm:text-3xl font-extrabold text-stone-900 tracking-tight">
+                <h2 class="text-xl sm:text-2xl lg:text-3xl font-extrabold text-stone-900 tracking-tight">
                     Interested in Hiring or Collaborating?
                 </h2>
             </div>
@@ -743,7 +675,7 @@
             </p>
         </div>
 
-        <div class="relative z-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5 w-full">
+        <div class="relative z-10 grid grid-cols-1 min-[540px]:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5 w-full">
             <!-- 1. LinkedIn -->
             <a href="https://www.linkedin.com/in/tiaraaptr" target="_blank" rel="noopener" class="group clean-card p-6 rounded-3xl bg-white border border-[#B9C8E8]/35 flex flex-col justify-between space-y-5 hover:border-[#F2D887] hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
                 <div class="flex items-center justify-between">
@@ -854,6 +786,49 @@
             </a>
         </div>
     </section>
+
+    <!-- ========================================== -->
+    <!-- CERTIFICATE PREVIEW MODAL -->
+    <!-- ========================================== -->
+    <div id="cert-modal" class="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-5 opacity-0 pointer-events-none transition-opacity duration-300" role="dialog" aria-modal="true" aria-labelledby="cert-modal-title">
+        <!-- Backdrop -->
+        <div id="cert-modal-backdrop" class="absolute inset-0 bg-stone-900/60 backdrop-blur-sm transition-opacity"></div>
+
+        <!-- Modal Dialog Box -->
+        <div class="relative w-full max-w-3xl max-h-[92vh] bg-white rounded-3xl border border-[#B9C8E8]/50 shadow-2xl overflow-hidden flex flex-col z-10 scale-95 transition-transform duration-300" id="cert-modal-card">
+            
+            <!-- Modal Header -->
+            <div class="px-5 py-4 border-b border-[#B9C8E8]/30 bg-gradient-to-r from-[#FFF9E9] via-white to-[#EDF2FA] flex items-center justify-between gap-3">
+                <div class="min-w-0">
+                    <div class="flex items-center gap-2 mb-0.5">
+                        <span id="cert-modal-badge" class="px-2 py-0.5 rounded-full bg-white border border-[#B9C8E8]/50 text-[9px] font-mono font-bold text-[#1F3D2B]"></span>
+                        <span class="text-[10px] font-mono text-stone-500">Verified Credential</span>
+                    </div>
+                    <h3 id="cert-modal-title" class="text-sm sm:text-base font-extrabold text-stone-900 truncate"></h3>
+                    <p id="cert-modal-issuer" class="text-xs text-[#1F3D2B] font-semibold truncate"></p>
+                </div>
+
+                <div class="flex items-center gap-2 shrink-0">
+                    <a id="cert-modal-download" href="#" target="_blank" rel="noopener" class="px-3 py-1.5 rounded-full bg-white border border-[#B9C8E8]/40 hover:bg-[#FFF9E9] hover:border-[#F2D887] text-[#1F3D2B] text-xs font-bold transition-all flex items-center gap-1.5 shadow-2xs">
+                        <span>Open Original</span>
+                        <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                        </svg>
+                    </a>
+                    <button type="button" onclick="closeCertificateModal()" class="w-9 h-9 rounded-full bg-white hover:bg-stone-100 border border-stone-200 text-stone-600 hover:text-stone-900 flex items-center justify-center transition-colors shadow-2xs cursor-pointer" aria-label="Close modal">
+                        <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Modal Content Preview Area -->
+            <div class="p-3 sm:p-5 flex-1 overflow-auto bg-stone-50/70 flex items-center justify-center min-h-[300px]">
+                <img id="cert-modal-img" src="" alt="Certificate Preview" class="max-w-full max-h-[70vh] object-contain rounded-xl shadow-sm border border-[#B9C8E8]/30 bg-white">
+            </div>
+        </div>
+    </div>
 
 </div>
 @endsection

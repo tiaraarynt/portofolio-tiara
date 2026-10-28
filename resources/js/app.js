@@ -379,6 +379,133 @@ function initMobileMenu() {
     });
 }
 
+// Sticky Navbar scroll effects (slight scale down, padding adjustment, subtle shadow, and backdrop blur)
+function initStickyNavbar() {
+    const navbarHeader = document.getElementById('navbar-header');
+    const navbarPill = document.getElementById('navbar-pill');
+    const navItems = document.querySelectorAll('.nav-pill-item');
+
+    if (!navbarHeader || !navbarPill) return;
+
+    let isScrolled = false;
+
+    const handleScroll = () => {
+        const scrolled = window.scrollY > 24;
+        if (scrolled === isScrolled) return;
+        isScrolled = scrolled;
+
+        if (isScrolled) {
+            navbarHeader.classList.remove('pt-4', 'sm:pt-6');
+            navbarHeader.classList.add('pt-2.5', 'sm:pt-3');
+
+            navbarPill.classList.remove('px-3', 'sm:px-6', 'py-2', 'sm:py-2.5', 'shadow-sm', 'bg-white/90', 'backdrop-blur-md');
+            navbarPill.classList.add('px-2.5', 'sm:px-5', 'py-1.5', 'sm:py-2', 'shadow-md', 'shadow-[#B9C8E8]/25', 'bg-white/80', 'backdrop-blur-xl', 'scale-[0.98]');
+
+            navItems.forEach(item => {
+                item.classList.remove('py-1.5');
+                item.classList.add('py-1');
+            });
+        } else {
+            navbarHeader.classList.remove('pt-2.5', 'sm:pt-3');
+            navbarHeader.classList.add('pt-4', 'sm:pt-6');
+
+            navbarPill.classList.remove('px-2.5', 'sm:px-5', 'py-1.5', 'sm:py-2', 'shadow-md', 'shadow-[#B9C8E8]/25', 'bg-white/80', 'backdrop-blur-xl', 'scale-[0.98]');
+            navbarPill.classList.add('px-3', 'sm:px-6', 'py-2', 'sm:py-2.5', 'shadow-sm', 'bg-white/90', 'backdrop-blur-md');
+
+            navItems.forEach(item => {
+                item.classList.remove('py-1');
+                item.classList.add('py-1.5');
+            });
+        }
+    };
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    handleScroll();
+}
+
+// Back to Top button controller
+function initBackToTop() {
+    const backToTopBtn = document.getElementById('back-to-top');
+    if (!backToTopBtn) return;
+
+    let isVisible = false;
+
+    const handleScroll = () => {
+        const shouldShow = window.scrollY > 300;
+        if (shouldShow === isVisible) return;
+        isVisible = shouldShow;
+
+        if (isVisible) {
+            backToTopBtn.classList.remove('opacity-0', 'pointer-events-none', 'translate-y-3');
+            backToTopBtn.classList.add('opacity-100', 'pointer-events-auto', 'translate-y-0');
+        } else {
+            backToTopBtn.classList.remove('opacity-100', 'pointer-events-auto', 'translate-y-0');
+            backToTopBtn.classList.add('opacity-0', 'pointer-events-none', 'translate-y-3');
+        }
+    };
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    handleScroll();
+
+    backToTopBtn.addEventListener('click', () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
+}
+
+// Certificate Preview Modal
+window.openCertificateModal = function(imageSrc, fileSrc, isPdf, title, issuer, badge) {
+    const modal = document.getElementById('cert-modal');
+    const modalCard = document.getElementById('cert-modal-card');
+    const modalImg = document.getElementById('cert-modal-img');
+    const modalTitle = document.getElementById('cert-modal-title');
+    const modalIssuer = document.getElementById('cert-modal-issuer');
+    const modalBadge = document.getElementById('cert-modal-badge');
+    const modalDownload = document.getElementById('cert-modal-download');
+
+    if (!modal) return;
+
+    if (modalTitle) modalTitle.textContent = title || '';
+    if (modalIssuer) modalIssuer.textContent = issuer || '';
+    if (modalBadge) {
+        modalBadge.textContent = badge || 'Certificate';
+        modalBadge.style.display = badge ? 'inline-block' : 'none';
+    }
+    if (modalImg) {
+        modalImg.src = imageSrc || fileSrc;
+        modalImg.alt = title || 'Certificate';
+    }
+    if (modalDownload) {
+        modalDownload.href = fileSrc || imageSrc;
+        modalDownload.textContent = isPdf ? 'Open PDF' : 'Open Image';
+    }
+
+    modal.classList.remove('opacity-0', 'pointer-events-none');
+    modal.classList.add('opacity-100', 'pointer-events-auto');
+    if (modalCard) {
+        modalCard.classList.remove('scale-95');
+        modalCard.classList.add('scale-100');
+    }
+    document.body.classList.add('overflow-hidden');
+};
+
+window.closeCertificateModal = function() {
+    const modal = document.getElementById('cert-modal');
+    const modalCard = document.getElementById('cert-modal-card');
+
+    if (!modal) return;
+
+    modal.classList.remove('opacity-100', 'pointer-events-auto');
+    modal.classList.add('opacity-0', 'pointer-events-none');
+    if (modalCard) {
+        modalCard.classList.remove('scale-100');
+        modalCard.classList.add('scale-95');
+    }
+    document.body.classList.remove('overflow-hidden');
+};
+
 // Global button carousel scroller helper
 window.scrollCarousel = function(containerId, offset) {
     const container = document.getElementById(containerId);
@@ -389,9 +516,25 @@ window.scrollCarousel = function(containerId, offset) {
 
 // Initialize on DOM ready
 document.addEventListener('DOMContentLoaded', () => {
+    initStickyNavbar();
+    initBackToTop();
     initProjectFilter();
     initMobileMenu();
     initDragToScroll();
     initProjectCarousel();
     initParallaxGradients();
+
+    // Close certificate modal on backdrop click or Escape key
+    const modal = document.getElementById('cert-modal');
+    const backdrop = document.getElementById('cert-modal-backdrop');
+    if (backdrop) {
+        backdrop.addEventListener('click', () => {
+            window.closeCertificateModal();
+        });
+    }
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && modal && !modal.classList.contains('pointer-events-none')) {
+            window.closeCertificateModal();
+        }
+    });
 });

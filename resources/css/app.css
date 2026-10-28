@@ -25,10 +25,9 @@ html {
     scroll-behavior: smooth;
 }
 
-/* Prevent horizontal overflow on mobile */
-body {
-    overflow-x: hidden;
-    background-color: #FFFDF7;
+html, body {
+    max-width: 100%;
+    overflow-x: clip;
 }
 
 /* Clean Aesthetic Glass & Card Styling with Powder Blue & Butter Yellow accents */
@@ -70,6 +69,7 @@ body {
     -ms-overflow-style: none;     /* IE/Edge */
     -webkit-overflow-scrolling: touch;
     scroll-padding-left: 1rem;
+    touch-action: pan-y;          /* Allow vertical scroll while enabling horizontal drag */
 }
 
 .netflix-scroll::-webkit-scrollbar {
@@ -79,35 +79,39 @@ body {
 /* 3D / Layered Carousel Effect with Butter Yellow & Powder Blue Highlights */
 .project-card-item {
     position: relative;
-    transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1),
-                opacity 0.45s cubic-bezier(0.16, 1, 0.3, 1),
-                border-color 0.45s ease,
-                box-shadow 0.45s ease,
-                filter 0.45s ease;
+    transition: transform 0.5s cubic-bezier(0.2, 0.8, 0.2, 1),
+                opacity 0.5s cubic-bezier(0.2, 0.8, 0.2, 1),
+                border-color 0.4s ease,
+                box-shadow 0.5s ease,
+                filter 0.5s ease;
     transform-origin: center center;
     will-change: transform, opacity;
 }
 
+/* Coverflow Active Center Card */
 .project-card-item.is-active {
-    transform: scale(1.08);
+    transform: scale(1.08) translateY(-4px);
     z-index: 30;
     opacity: 1;
-    border-color: #1F3D2B !important;
-    box-shadow: 0 24px 48px -10px rgba(185, 200, 232, 0.45), 0 0 0 2px #F2D887, 0 0 24px rgba(242, 216, 135, 0.35);
+    border-color: #F2D887 !important;
+    box-shadow: 0 20px 40px -12px rgba(31, 61, 43, 0.12),
+                0 0 0 2px #F2D887,
+                0 8px 24px -4px rgba(242, 216, 135, 0.35);
     filter: none;
 }
 
+/* Coverflow Side Neighbor Cards: Scaled down, dimmed & softer focus */
 .project-card-item:not(.is-active) {
-    transform: scale(0.87);
+    transform: scale(0.88);
     z-index: 10;
-    opacity: 0.55;
-    filter: brightness(0.92) saturate(0.85);
+    opacity: 0.45;
+    filter: brightness(0.95) saturate(0.85);
 }
 
 .project-card-item:not(.is-active):hover {
-    opacity: 0.82;
-    transform: scale(0.90);
-    filter: brightness(0.96) saturate(0.92);
+    opacity: 0.75;
+    transform: scale(0.91);
+    filter: brightness(0.98) saturate(0.92);
     cursor: pointer;
 }
 
@@ -115,6 +119,8 @@ body {
 .parallax-orb {
     will-change: transform;
     pointer-events: none;
+    max-width: 90vw;
+    max-height: 90vw;
 }
 
 .section-gradient-accent {
@@ -125,6 +131,8 @@ body {
     opacity: 0.8;
     will-change: transform;
     z-index: 0;
+    max-width: 90vw;
+    max-height: 90vw;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -133,12 +141,23 @@ body {
         transform: none !important;
         transition: none !important;
     }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
 }
 
 /* Interactive Parallax & Section Gradient Accents */
 .parallax-orb {
     will-change: transform;
     pointer-events: none;
+    max-width: 90vw;
+    max-height: 90vw;
 }
 
 .section-gradient-accent {
@@ -149,6 +168,8 @@ body {
     opacity: 0.8;
     will-change: transform;
     z-index: 0;
+    max-width: 90vw;
+    max-height: 90vw;
 }
 
 @media (prefers-reduced-motion: reduce) {
