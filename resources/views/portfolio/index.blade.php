@@ -11,8 +11,8 @@
         <div class="section-gradient-accent -top-16 -left-16 w-72 sm:w-80 h-72 sm:h-80 bg-[#F2D887]/28" data-speed="0.06"></div>
         <div class="section-gradient-accent -bottom-10 -right-12 w-72 sm:w-96 h-72 sm:h-96 bg-[#B9C8E8]/30" data-speed="-0.05"></div>
 
-        <div class="relative z-10 flex flex-col-reverse lg:flex-row items-center justify-between gap-8 lg:gap-12 w-full">
-            <!-- Left Text Content -->
+        <div class="relative z-10 flex flex-col lg:flex-row items-center justify-between gap-8 lg:gap-12 w-full">
+            <!-- Left Text Content (On mobile/tablet comes first) -->
             <div class="space-y-4 max-w-xl lg:max-w-2xl flex-1 w-full flex flex-col items-center lg:items-start text-center lg:text-left">
                 <!-- Status Availability Pill -->
                 <div class="inline-flex items-center gap-1.5 sm:gap-2 px-3 sm:px-3.5 py-1 rounded-full text-xs font-bold bg-[#FFF9E9] text-[#1F3D2B] border border-[#F2D887]/70 shadow-2xs">
@@ -52,8 +52,8 @@
                 </div>
             </div>
 
-            <!-- Right Profile Photo Card (With Butter Yellow & Powder Blue Gradient Frame) -->
-            <div class="flex justify-center flex-shrink-0 my-2 sm:my-0">
+            <!-- Right Profile Photo Card (On mobile/tablet appears below all text content & CTA button) -->
+            <div class="flex justify-center flex-shrink-0 my-2 lg:my-0">
                 <div class="relative flex items-center justify-center p-2">
                     <div class="w-48 h-48 sm:w-60 sm:h-60 lg:w-72 lg:h-72 rounded-full bg-gradient-to-tr from-[#1F3D2B] via-[#B9C8E8] to-[#F2D887] p-1.5 shadow-xl flex items-center justify-center relative">
                         <!-- Inner Soft Circle Canvas -->
@@ -232,14 +232,14 @@
         <!-- Section Variation Gradient: Dual Horizontal Blend -->
         <div class="section-gradient-accent -top-10 left-1/4 w-[32rem] h-64 bg-gradient-to-r from-[#B9C8E8]/20 via-[#FFF9E9]/40 to-[#F2D887]/20" data-speed="0.05"></div>
 
-        <div class="relative z-10 flex flex-col sm:flex-row sm:items-end justify-between gap-1 border-b border-[#B9C8E8]/35 pb-3">
-            <div>
-                <h2 class="text-xl sm:text-2xl lg:text-3xl font-extrabold text-stone-900 tracking-tight">
+        <div class="relative z-10 flex items-center justify-between gap-3 border-b border-[#B9C8E8]/35 pb-3">
+            <div class="min-w-0 flex-1">
+                <h2 class="text-xl sm:text-2xl lg:text-3xl font-extrabold text-stone-900 tracking-tight truncate">
                     Work &amp; Internship Experience
                 </h2>
             </div>
             <!-- Navigation Prev/Next Buttons -->
-            <div class="flex items-center gap-1.5">
+            <div class="flex items-center gap-1.5 flex-shrink-0">
                 <button type="button" onclick="scrollCarousel('exp-scroll-container', -320)" class="w-8 h-8 rounded-full border border-[#B9C8E8]/40 bg-white hover:bg-[#FFF9E9] hover:border-[#F2D887] text-[#1F3D2B] flex items-center justify-center transition-all shadow-2xs cursor-pointer active:scale-95" aria-label="Scroll Left">
                     <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M15 19l-7-7 7-7"/></svg>
                 </button>
@@ -301,19 +301,19 @@
         <!-- Section Variation Gradient: Focal Halo behind Carousel Stage -->
         <div class="section-gradient-accent top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[44rem] h-84 bg-[radial-gradient(ellipse,_var(--tw-gradient-stops))] from-[#F2D887]/22 via-[#B9C8E8]/18 to-transparent" data-speed="0.03"></div>
 
-        <div class="relative z-10 flex flex-col sm:flex-row sm:items-end justify-between gap-1 border-b border-[#B9C8E8]/35 pb-2.5">
-            <div>
-                <h2 class="text-xl sm:text-2xl lg:text-3xl font-extrabold text-stone-900 tracking-tight">
+        <div class="relative z-10 flex items-center justify-between gap-3 border-b border-[#B9C8E8]/35 pb-2.5">
+            <div class="min-w-0 flex-1">
+                <h2 class="text-xl sm:text-2xl lg:text-3xl font-extrabold text-stone-900 tracking-tight truncate">
                     Project Experience
                 </h2>
             </div>
 
             <!-- Action Controls: Prev/Next Carousel Arrows -->
             <div class="flex items-center gap-2 flex-shrink-0">
-                <button type="button" onclick="scrollProjectsByStep(-1)" class="w-9 h-9 rounded-full border border-[#B9C8E8]/40 bg-white hover:bg-[#FFF9E9] hover:border-[#F2D887] text-[#1F3D2B] flex items-center justify-center transition-all shadow-xs cursor-pointer active:scale-95" aria-label="Previous Project">
+                <button type="button" onclick="scrollProjectsByStep(-1)" class="w-8 h-8 sm:w-9 sm:h-9 rounded-full border border-[#B9C8E8]/40 bg-white hover:bg-[#FFF9E9] hover:border-[#F2D887] text-[#1F3D2B] flex items-center justify-center transition-all shadow-xs cursor-pointer active:scale-95" aria-label="Previous Project">
                     <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M15 19l-7-7 7-7"/></svg>
                 </button>
-                <button type="button" onclick="scrollProjectsByStep(1)" class="w-9 h-9 rounded-full border border-[#B9C8E8]/40 bg-white hover:bg-[#FFF9E9] hover:border-[#F2D887] text-[#1F3D2B] flex items-center justify-center transition-all shadow-xs cursor-pointer active:scale-95" aria-label="Next Project">
+                <button type="button" onclick="scrollProjectsByStep(1)" class="w-8 h-8 sm:w-9 sm:h-9 rounded-full border border-[#B9C8E8]/40 bg-white hover:bg-[#FFF9E9] hover:border-[#F2D887] text-[#1F3D2B] flex items-center justify-center transition-all shadow-xs cursor-pointer active:scale-95" aria-label="Next Project">
                     <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/></svg>
                 </button>
             </div>
@@ -526,69 +526,45 @@
         <div class="relative z-10 flex flex-col sm:flex-row sm:items-end justify-between gap-1 border-b border-[#B9C8E8]/35 pb-3">
             <div>
                 <h2 class="text-xl sm:text-2xl lg:text-3xl font-extrabold text-stone-900 tracking-tight">
-                    Skills &amp; Software Stack
+                    Tools &amp; Technologies
                 </h2>
             </div>
             <p class="text-xs font-semibold text-[#1F3D2B]">
-                Technologies and tools I work with
+                Technologies and tools I use
             </p>
         </div>
 
         @php
             $skillToolLogos = [
                 // 1. Laravel – official flame logo (Simple Icons)
-                'Laravel Framework' => '<svg class="w-4 h-4" viewBox="0 0 24 24" fill="#FF2D20"><path d="M23.642 5.43a.364.364 0 0 1 .014.1v5.149c0 .135-.073.26-.189.326l-4.323 2.49v4.934a.378.378 0 0 1-.188.326L9.93 23.949a.316.316 0 0 1-.066.027.299.299 0 0 1-.1.017.283.283 0 0 1-.1-.02.29.29 0 0 1-.066-.024L.531 18.755a.376.376 0 0 1-.188-.326V2.974c0-.038.005-.073.014-.108a.337.337 0 0 1 .014-.073.368.368 0 0 1 .038-.067l.023-.032a.366.366 0 0 1 .053-.045.327.327 0 0 1 .03-.022L5.062.189a.379.379 0 0 1 .378 0l4.48 2.585a.375.375 0 0 1 .048.032.344.344 0 0 1 .052.046l.024.031a.364.364 0 0 1 .04.067.333.333 0 0 1 .012.072c.01.036.014.073.013.11v9.638l3.76-2.168V5.43c0-.037.003-.073.012-.108a.366.366 0 0 1 .013-.073.376.376 0 0 1 .039-.067l.024-.031a.388.388 0 0 1 .051-.045.362.362 0 0 1 .031-.022l4.479-2.584a.379.379 0 0 1 .378 0l4.48 2.584a.356.356 0 0 1 .031.022.388.388 0 0 1 .051.045l.023.031a.376.376 0 0 1 .04.067c.007.022.01.047.012.072zm-.74 5.013V6.232l-1.57.905-2.192 1.264v4.21zm-4.856 8.33v-4.21l-2.162 1.244-6.16 3.528v4.25zM1.126 3.2v15.354l8.322 4.802v-4.25l-4.35-2.476a.372.372 0 0 1-.053-.035.362.362 0 0 1-.046-.05l-.025-.035a.383.383 0 0 1-.035-.07.308.308 0 0 1-.01-.07.354.354 0 0 1-.007-.068V7.58zm4.48-2.404L1.89 3.2l3.716 2.143 3.716-2.143zm4.48 7.65L6.37 6.302l-3.716 2.143 3.716 2.142zm-.376 1.002l-3.712-2.14v4.127l2.193 1.263 1.519.875zm8.322-8.654l-3.716 2.14 3.716 2.143 3.716-2.142zm-.376 4.283L14.44 8.935l-2.192-1.264v4.21l2.192 1.264 1.522.876zm4.48 2.584l-3.712-2.14v4.126l2.193 1.264 1.519.875z"/></svg>',
+                'Laravel' => '<svg class="w-4 h-4" viewBox="0 0 24 24" fill="#FF2D20"><path d="M23.642 5.43a.364.364 0 0 1 .014.1v5.149c0 .135-.073.26-.189.326l-4.323 2.49v4.934a.378.378 0 0 1-.188.326L9.93 23.949a.316.316 0 0 1-.066.027.299.299 0 0 1-.1.017.283.283 0 0 1-.1-.02.29.29 0 0 1-.066-.024L.531 18.755a.376.376 0 0 1-.188-.326V2.974c0-.038.005-.073.014-.108a.337.337 0 0 1 .014-.073.368.368 0 0 1 .038-.067l.023-.032a.366.366 0 0 1 .053-.045.327.327 0 0 1 .03-.022L5.062.189a.379.379 0 0 1 .378 0l4.48 2.585a.375.375 0 0 1 .048.032.344.344 0 0 1 .052.046l.024.031a.364.364 0 0 1 .04.067.333.333 0 0 1 .012.072c.01.036.014.073.013.11v9.638l3.76-2.168V5.43c0-.037.003-.073.012-.108a.366.366 0 0 1 .013-.073.376.376 0 0 1 .039-.067l.024-.031a.388.388 0 0 1 .051-.045.362.362 0 0 1 .031-.022l4.479-2.584a.379.379 0 0 1 .378 0l4.48 2.584a.356.356 0 0 1 .031.022.388.388 0 0 1 .051.045l.023.031a.376.376 0 0 1 .04.067c.007.022.01.047.012.072zm-.74 5.013V6.232l-1.57.905-2.192 1.264v4.21zm-4.856 8.33v-4.21l-2.162 1.244-6.16 3.528v4.25zM1.126 3.2v15.354l8.322 4.802v-4.25l-4.35-2.476a.372.372 0 0 1-.053-.035.362.362 0 0 1-.046-.05l-.025-.035a.383.383 0 0 1-.035-.07.308.308 0 0 1-.01-.07.354.354 0 0 1-.007-.068V7.58zm4.48-2.404L1.89 3.2l3.716 2.143 3.716-2.143zm4.48 7.65L6.37 6.302l-3.716 2.143 3.716 2.142zm-.376 1.002l-3.712-2.14v4.127l2.193 1.263 1.519.875zm8.322-8.654l-3.716 2.14 3.716 2.143 3.716-2.142zm-.376 4.283L14.44 8.935l-2.192-1.264v4.21l2.192 1.264 1.522.876zm4.48 2.584l-3.712-2.14v4.126l2.193 1.264 1.519.875z"/></svg>',
 
-                // 2. HTML5 & CSS3 / Bootstrap – official HTML5 logo (Simple Icons)
-                'HTML5 & CSS3 / Bootstrap' => '<svg class="w-4 h-4" viewBox="0 0 24 24" fill="#E34F26"><path d="M1.5 0h21l-1.91 21.563L11.977 24l-8.564-2.438L1.5 0zm7.031 9.75l-.232-2.718 10.059-.003.236-2.671H5.408l.707 8.063h9.013l-.332 3.738-2.818.761-2.825-.76-.182-2.039H6.287l.352 4.414 5.34 1.482 5.344-1.482.73-8.283H8.531z"/></svg>',
+                // 2. HTML5, CSS3 & JavaScript – HTML5 logo
+                'HTML5, CSS3 & JavaScript' => '<svg class="w-4 h-4" viewBox="0 0 24 24" fill="#E34F26"><path d="M1.5 0h21l-1.91 21.563L11.977 24l-8.564-2.438L1.5 0zm7.031 9.75l-.232-2.718 10.059-.003.236-2.671H5.408l.707 8.063h9.013l-.332 3.738-2.818.761-2.825-.76-.182-2.039H6.287l.352 4.414 5.34 1.482 5.344-1.482.73-8.283H8.531z"/></svg>',
 
-                // 3. Tailwind CSS – official cyan logo (Simple Icons)
-                'Tailwind CSS' => '<svg class="w-4 h-4" viewBox="0 0 24 24" fill="#06B6D4"><path d="M12.001 4.8c-3.2 0-5.2 1.6-6 4.8 1.2-1.6 2.6-2.2 4.2-1.8.913.228 1.565.89 2.288 1.624C13.666 10.618 15.027 12 18.001 12c3.2 0 5.2-1.6 6-4.8-1.2 1.6-2.6 2.2-4.2 1.8-.913-.228-1.565-.89-2.288-1.624C16.337 6.182 14.976 4.8 12.001 4.8zm-6 7.2c-3.2 0-5.2 1.6-6 4.8 1.2-1.6 2.6-2.2 4.2-1.8.913.228 1.565.89 2.288 1.624 1.177 1.194 2.538 2.576 5.512 2.576 3.2 0 5.2-1.6 6-4.8-1.2 1.6-2.6 2.2-4.2 1.8-.913-.228-1.565-.89-2.288-1.624C10.336 13.382 8.975 12 6.001 12z"/></svg>',
+                // 3. Bootstrap & Tailwind CSS – Bootstrap B logo
+                'Bootstrap & Tailwind CSS' => '<svg class="w-4 h-4" viewBox="0 0 24 24" fill="#7952B3"><path d="M6.375 7.5C6.375 5.085 8.085 3 10.5 3h3.375C16.29 3 18 4.71 18 6.75c0 1.185-.555 2.25-1.44 2.94.975.63 1.62 1.74 1.62 3.06 0 2.07-1.8 3.75-3.93 3.75H10.5C8.085 16.5 6.375 14.415 6.375 12V7.5zM10.5 9.75h3.375c.69 0 1.125-.435 1.125-1.125C15 7.935 14.565 7.5 13.875 7.5H10.5v2.25zm0 2.25v2.25h4.125c.735 0 1.125-.435 1.125-1.125S15.36 12 14.625 12H10.5z"/></svg>',
 
-                // 4. SQL & Relational DB – official MySQL logo (Simple Icons)
-                'SQL & Relational DB' => '<svg class="w-4 h-4" viewBox="0 0 24 24" fill="#4479A1"><path d="M16.564 7.64c-.207-.549-.575-.97-1.077-1.222-.497-.249-1.097-.306-1.742-.167a5.57 5.57 0 0 0-1.84 1.026c-.53.453-.94.996-1.196 1.583-.244.561-.318 1.155-.224 1.722.096.577.382 1.095.82 1.488.423.38.96.612 1.543.664.577.051 1.18-.084 1.723-.393a5.54 5.54 0 0 0 1.547-1.428c.394-.559.61-1.198.625-1.838a2.91 2.91 0 0 0-.179-1.435zM12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm7.848 15.688c-.378.854-.972 1.573-1.71 2.067-.736.494-1.597.747-2.483.729-.877-.019-1.725-.308-2.434-.828a5.558 5.558 0 0 1-1.683-2.023 5.485 5.485 0 0 1-.486-2.57c.073-.889.39-1.729.907-2.428.514-.694 1.206-1.218 2.001-1.503.784-.282 1.628-.317 2.436-.102.801.212 1.517.659 2.052 1.282.527.614.856 1.37.94 2.164.085.807-.076 1.616-.452 2.327-.145.275-.326.529-.536.756.242.096.496.166.757.208.384.062.776.046 1.15-.049a2.76 2.76 0 0 0 .977-.487c.219-.174.402-.387.538-.631.144-.258.216-.549.212-.843a2.03 2.03 0 0 0-.276-1.026 3.036 3.036 0 0 0-.74-.848c-.08-.063-.097-.179-.039-.263.058-.084.172-.104.258-.046.31.207.574.484.773.81.2.33.298.705.286 1.087a2.53 2.53 0 0 1-.268 1.077 3.3 3.3 0 0 1-.676.812 3.27 3.27 0 0 1-1.185.599 4.14 4.14 0 0 1-1.425.071 4.54 4.54 0 0 1-1.348-.415z"/></svg>',
+                // 4. MySQL – official MySQL dolphin logo
+                'MySQL' => '<svg class="w-4 h-4" viewBox="0 0 24 24" fill="#4479A1"><path d="M16.564 7.64c-.207-.549-.575-.97-1.077-1.222-.497-.249-1.097-.306-1.742-.167a5.57 5.57 0 0 0-1.84 1.026c-.53.453-.94.996-1.196 1.583-.244.561-.318 1.155-.224 1.722.096.577.382 1.095.82 1.488.423.38.96.612 1.543.664.577.051 1.18-.084 1.723-.393a5.54 5.54 0 0 0 1.547-1.428c.394-.559.61-1.198.625-1.838a2.91 2.91 0 0 0-.179-1.435zM12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm7.848 15.688c-.378.854-.972 1.573-1.71 2.067-.736.494-1.597.747-2.483.729-.877-.019-1.725-.308-2.434-.828a5.558 5.558 0 0 1-1.683-2.023 5.485 5.485 0 0 1-.486-2.57c.073-.889.39-1.729.907-2.428.514-.694 1.206-1.218 2.001-1.503.784-.282 1.628-.317 2.436-.102.801.212 1.517.659 2.052 1.282.527.614.856 1.37.94 2.164.085.807-.076 1.616-.452 2.327-.145.275-.326.529-.536.756.242.096.496.166.757.208.384.062.776.046 1.15-.049a2.76 2.76 0 0 0 .977-.487c.219-.174.402-.387.538-.631.144-.258.216-.549.212-.843a2.03 2.03 0 0 0-.276-1.026 3.036 3.036 0 0 0-.74-.848c-.08-.063-.097-.179-.039-.263.058-.084.172-.104.258-.046.31.207.574.484.773.81.2.33.298.705.286 1.087a2.53 2.53 0 0 1-.268 1.077 3.3 3.3 0 0 1-.676.812 3.27 3.27 0 0 1-1.185.599 4.14 4.14 0 0 1-1.425.071 4.54 4.54 0 0 1-1.348-.415z"/></svg>',
 
-                // 5. Mobile Programming Basics – official Android logo (Simple Icons)
-                'Mobile Programming Basics' => '<svg class="w-4 h-4" viewBox="0 0 24 24" fill="#3DDC84"><path d="M17.523 15.3414c-.5511 0-.9993-.4486-.9993-.9997s.4482-.9993.9993-.9993c.551 0 .9993.4482.9993.9993.0001.5511-.4483.9997-.9993.9997m-11.046 0c-.5511 0-.9993-.4486-.9993-.9997s.4482-.9993.9993-.9993c.5511 0 .9993.4482.9993.9993 0 .5511-.4482.9997-.9993.9997m11.4045-6.02l1.9973-3.4592a.416.416 0 00-.1521-.5676.416.416 0 00-.5676.1521l-2.0223 3.503C15.5902 8.414 13.8533 8.081 12 8.081s-3.5902.333-5.1367.8687L4.841 5.4467a.4161.4161 0 00-.5677-.1521.4157.4157 0 00-.1521.5676l1.9974 3.4592C2.6889 11.1867.3432 14.6589 0 18.761h24c-.3432-4.1021-2.6889-7.5743-6.1185-9.4396"/></svg>',
+                // 5. Figma – official multi-color logo (Simple Icons)
+                'Figma' => '<svg class="w-4 h-4" viewBox="0 0 24 24" fill="none"><path d="M8 24c2.2 0 4-1.8 4-4v-4H8c-2.2 0-4 1.8-4 4s1.8 4 4 4z" fill="#0ACF83"/><path d="M4 12c0-2.2 1.8-4 4-4h4v8H8c-2.2 0-4-1.8-4-4z" fill="#A259FF"/><path d="M4 4c0-2.2 1.8-4 4-4h4v8H8C5.8 8 4 6.2 4 4z" fill="#F24E1E"/><path d="M12 0h4c2.2 0 4 1.8 4 4s-1.8 4-4 4h-4V0z" fill="#FF7262"/><path d="M20 12c0 2.2-1.8 4-4 4s-4-1.8-4-4 1.8-4 4-4 4 1.8 4 4z" fill="#1ABCFE"/></svg>',
 
-                // 6. Web Hosting & Deployment – official Cloud & Server icon
-                'Web Hosting & Deployment' => '<svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="#1F3D2B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 14.899A7 7 0 1 1 15.71 8h1.79a4.5 4.5 0 0 1 2.5 8.242"/><path d="M12 12v9"/><path d="m8 17 4-4 4 4"/></svg>',
+                // 6. Draw.io – official Diagrams.net logo
+                'Draw.io' => '<svg class="w-4 h-4" viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="7" height="7" rx="1.5" fill="#F08705"/><rect x="14" y="14" width="7" height="7" rx="1.5" fill="#F08705"/><path d="M10 6.5h7a1 1 0 0 1 1 1V14M6.5 10v7a1 1 0 0 0 1 1H14" stroke="#F08705" stroke-width="1.8" stroke-linecap="round"/></svg>',
 
-                // 7. Figma – official multi-color logo (Simple Icons)
-                'Figma (Lo-Fi & Hi-Fi Prototype)' => '<svg class="w-4 h-4" viewBox="0 0 24 24" fill="none"><path d="M8 24c2.2 0 4-1.8 4-4v-4H8c-2.2 0-4 1.8-4 4s1.8 4 4 4z" fill="#0ACF83"/><path d="M4 12c0-2.2 1.8-4 4-4h4v8H8c-2.2 0-4-1.8-4-4z" fill="#A259FF"/><path d="M4 4c0-2.2 1.8-4 4-4h4v8H8C5.8 8 4 6.2 4 4z" fill="#F24E1E"/><path d="M12 0h4c2.2 0 4 1.8 4 4s-1.8 4-4 4h-4V0z" fill="#FF7262"/><path d="M20 12c0 2.2-1.8 4-4 4s-4-1.8-4-4 1.8-4 4-4 4 1.8 4 4z" fill="#1ABCFE"/></svg>',
+                // 7. Canva – official Canva logo
+                'Canva' => '<svg class="w-4 h-4" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" fill="#00C4CC"/><path d="M15.5 14.5c-.8.8-1.9 1.2-3.1 1.2-2.5 0-4.4-1.8-4.4-4.5 0-2.6 1.9-4.5 4.5-4.5 1.1 0 2.1.4 2.8 1.1l-1.2 1.3c-.4-.4-1-.7-1.6-.7-1.6 0-2.8 1.3-2.8 2.8s1.2 2.8 2.8 2.8c.7 0 1.3-.3 1.7-.7l1.3 1.2z" fill="#fff"/></svg>',
 
-                // 8. Draw.io – official Diagrams.net logo
-                'Draw.io (System Flow & UML)' => '<svg class="w-4 h-4" viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="7" height="7" rx="1.5" fill="#F08705"/><rect x="14" y="14" width="7" height="7" rx="1.5" fill="#F08705"/><path d="M10 6.5h7a1 1 0 0 1 1 1V14M6.5 10v7a1 1 0 0 0 1 1H14" stroke="#F08705" stroke-width="1.8" stroke-linecap="round"/></svg>',
+                // 8. Visual Studio Code – official VS Code logo
+                'Visual Studio Code' => '<svg class="w-4 h-4" viewBox="0 0 24 24" fill="none"><path d="m17.5 2.1-10 7.7-4.8-3.7L1 7.2v9.6l1.7 1.1 4.8-3.7 10 7.7 5.5-2.6V4.7l-5.5-2.6zm-10 11.2L4.2 11l3.3-2.3v4.6zm10.7 4.1-7.2-5.4 7.2-5.4v10.8z" fill="#007ACC"/></svg>',
 
-                // 9. SDLC & Waterfall Method – Software Architecture & Sprint Cycle icon
-                'SDLC & Waterfall Method' => '<svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="#2563EB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 0 1 15-6.7L21 8"/><path d="M21 3v5h-5"/><path d="M21 12a9 9 0 0 1-15 6.7L3 16"/><path d="M3 21v-5h5"/></svg>',
+                // 9. Google Antigravity – sparkle / AI star icon
+                'Google Antigravity' => '<svg class="w-4 h-4" viewBox="0 0 24 24" fill="none"><path d="M12 2l2.09 6.26L20.5 10l-6.41 1.74L12 18l-2.09-6.26L3.5 10l6.41-1.74L12 2z" fill="#1F3D2B"/><path d="M19 2l.94 2.81L22.75 6l-2.81.94L19 9.75l-.94-2.81L15.25 6l2.81-.94L19 2z" fill="#F2D887"/></svg>',
 
-                // 10. Black Box & Usability Testing – QA Shield Verified Testing icon
-                'Black Box & Usability Testing' => '<svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="#16A34A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>',
-
-                // 11. User Research & Wireframing – Wireframe Layout UI icon
-                'User Research & Wireframing' => '<svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="#8B5CF6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M3 9h18M9 21V9"/></svg>',
-
-                // 12. Canva & Visual Assets – official Canva logo (Simple Icons)
-                'Canva & Visual Assets' => '<svg class="w-4 h-4" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" fill="#00C4CC"/><path d="M15.5 14.5c-.8.8-1.9 1.2-3.1 1.2-2.5 0-4.4-1.8-4.4-4.5 0-2.6 1.9-4.5 4.5-4.5 1.1 0 2.1.4 2.8 1.1l-1.2 1.3c-.4-.4-1-.7-1.6-.7-1.6 0-2.8 1.3-2.8 2.8s1.2 2.8 2.8 2.8c.7 0 1.3-.3 1.7-.7l1.3 1.2z" fill="#fff"/></svg>',
-
-                // 13. Unity – official Unity 3D logo (Simple Icons)
-                'Unity (Augmented Reality)' => '<svg class="w-4 h-4" viewBox="0 0 24 24" fill="#222C37"><path d="M10.4 17.7 5.7 15l1.6-4.5 4.7 2.7zm3.2 0 3.1-5.5 4.7-2.7 1.6 4.5zm-1.6-7.4-4.7-2.7L8.9 3l4.7 2.7zm-2.4 1.4 2.4-1.4 2.4 1.4v2.7l-2.4 1.4-2.4-1.4zM24 10.3l-2.1-5.7-5.9 1.1L12 0 7.9 5.7 2.1 4.6 0 10.3l4.5 3.7L0 17.7l2.1 5.7 5.9-1.1L12 24l4.1-5.7 5.9 1.1 2.1-5.7-4.5-3.7z"/></svg>',
-
-                // 14. Blender – official Blender logo (Simple Icons)
-                'Blender (3D Modeling)' => '<svg class="w-4 h-4" viewBox="0 0 24 24" fill="none"><path d="M12.4 12.8a3.5 3.5 0 1 1-3.5-3.5 3.5 3.5 0 0 1 3.5 3.5z" fill="#0055FF"/><path d="M22.8 10.4a6.2 6.2 0 0 0-4.3-1.8l-5.6-5.6a1 1 0 0 0-1.4 0l-.7.7a1 1 0 0 0 0 1.4l3.8 3.8a6.3 6.3 0 1 0 8.2 1.5zm-10.4 6a3.5 3.5 0 1 1 3.5-3.5 3.5 3.5 0 0 1-3.5 3.5z" fill="#E87D0D"/></svg>',
-
-                // 15. Machine Learning – official TensorFlow logo (Simple Icons)
-                'Machine Learning (MobileNetV2)' => '<svg class="w-4 h-4" viewBox="0 0 24 24" fill="#FF6F00"><path d="M1.292 5.856L11.54 0v24l-4.095-2.397V7.613l-6.153 3.57V5.856zM22.708 5.856L12.46 0v24l4.095-2.397V7.613l6.153 3.57V5.856z"/></svg>',
-
-                // 16. VS Code – official Visual Studio Code logo (Simple Icons)
-                'VS Code & Android Studio' => '<svg class="w-4 h-4" viewBox="0 0 24 24" fill="none"><path d="m17.5 2.1-10 7.7-4.8-3.7L1 7.2v9.6l1.7 1.1 4.8-3.7 10 7.7 5.5-2.6V4.7l-5.5-2.6zm-10 11.2L4.2 11l3.3-2.3v4.6zm10.7 4.1-7.2-5.4 7.2-5.4v10.8z" fill="#007ACC"/></svg>',
-
-                // 17. Power BI – official Microsoft Power BI logo (Simple Icons)
-                'Power BI & Tableau' => '<svg class="w-4 h-4" viewBox="0 0 24 24" fill="none"><rect x="3" y="13" width="4" height="8" rx="1" fill="#F2C811"/><rect x="10" y="8" width="4" height="13" rx="1" fill="#E6A100"/><rect x="17" y="3" width="4" height="18" rx="1" fill="#D37E00"/></svg>',
-
-                // 18. Git & GitHub – official Git logo (Simple Icons)
-                'Jira & Git / GitHub' => '<svg class="w-4 h-4" viewBox="0 0 24 24" fill="#F05032"><path d="M23.546 10.93L13.067.452a1.5 1.5 0 0 0-2.126 0L8.808 2.583l3.298 3.298a1.782 1.782 0 0 1 2.27 2.293L17.7 11.5a1.78 1.78 0 1 1-1.07.727L13.5 9.1v5.82a1.78 1.78 0 1 1-1.5 0V8.92a1.78 1.78 0 0 1-.954-2.336L7.744 3.282.454 10.57a1.5 1.5 0 0 0 0 2.126l10.48 10.48a1.5 1.5 0 0 0 2.126 0l10.486-10.12a1.5 1.5 0 0 0 0-2.126z"/></svg>',
+                // 10. Git & GitHub – official Git logo
+                'Git & GitHub' => '<svg class="w-4 h-4" viewBox="0 0 24 24" fill="#F05032"><path d="M23.546 10.93L13.067.452a1.5 1.5 0 0 0-2.126 0L8.808 2.583l3.298 3.298a1.782 1.782 0 0 1 2.27 2.293L17.7 11.5a1.78 1.78 0 1 1-1.07.727L13.5 9.1v5.82a1.78 1.78 0 1 1-1.5 0V8.92a1.78 1.78 0 0 1-.954-2.336L7.744 3.282.454 10.57a1.5 1.5 0 0 0 0 2.126l10.48 10.48a1.5 1.5 0 0 0 2.126 0l10.486-10.12a1.5 1.5 0 0 0 0-2.126z"/></svg>',
             ];
             $defaultLogo = '<svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="#1F3D2B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>';
         @endphp
@@ -798,14 +774,13 @@
         <div class="relative w-full max-w-3xl max-h-[92vh] bg-white rounded-3xl border border-[#B9C8E8]/50 shadow-2xl overflow-hidden flex flex-col z-10 scale-95 transition-transform duration-300" id="cert-modal-card">
             
             <!-- Modal Header -->
-            <div class="px-5 py-4 border-b border-[#B9C8E8]/30 bg-gradient-to-r from-[#FFF9E9] via-white to-[#EDF2FA] flex items-center justify-between gap-3">
+            <div class="px-5 py-3.5 sm:py-4 border-b border-[#B9C8E8]/30 bg-gradient-to-r from-[#FFF9E9] via-white to-[#EDF2FA] flex items-center justify-between gap-3">
                 <div class="min-w-0">
-                    <div class="flex items-center gap-2 mb-0.5">
-                        <span id="cert-modal-badge" class="px-2 py-0.5 rounded-full bg-white border border-[#B9C8E8]/50 text-[9px] font-mono font-bold text-[#1F3D2B]"></span>
-                        <span class="text-[10px] font-mono text-stone-500">Verified Credential</span>
+                    <div class="mb-1">
+                        <span id="cert-modal-badge" class="px-2.5 py-0.5 rounded-full bg-white border border-[#B9C8E8]/50 text-[9.5px] font-mono font-bold text-[#1F3D2B] shadow-2xs"></span>
                     </div>
                     <h3 id="cert-modal-title" class="text-sm sm:text-base font-extrabold text-stone-900 truncate"></h3>
-                    <p id="cert-modal-issuer" class="text-xs text-[#1F3D2B] font-semibold truncate"></p>
+                    <p id="cert-modal-issuer" class="text-xs text-[#1F3D2B] font-semibold truncate mt-0.5"></p>
                 </div>
 
                 <div class="flex items-center gap-2 shrink-0">
