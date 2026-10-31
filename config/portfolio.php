@@ -97,7 +97,7 @@ return [
             'methodology' => 'Prototyping SDLC',
             'description' => 'Developed an Education and Training Module for the Depok City Government to support civil servant (ASN) training planning, document management, and training progress monitoring.',
             'url' => null,
-            'image' => null,
+            'image' => 'diklat.jpeg',
         ],
         [
             'id' => 'skj-module',
@@ -107,7 +107,7 @@ return [
             'methodology' => 'Waterfall SDLC',
             'description' => 'Developed features for managing Job Competency Standards data to provide information about competency requirements for civil servant positions within the Depok City Government.',
             'url' => null,
-            'image' => null,
+            'image' => 'skj.png',
         ],
         [
             'id' => 'timun-mas-folktale-ar',
@@ -116,7 +116,7 @@ return [
             'technology' => ['Unity', 'Blender', 'Augmented Reality', 'Figma'],
             'description' => 'Developed a mobile augmented reality application that brings the Indonesian folktale Timun Mas to life. Users can scan different image markers to display 3D scenes that follow the storyline of Timun Mas.',
             'url' => 'https://drive.google.com/drive/folders/1ywydPBG5QtfNdO0Yv87SzW6b0tv5T7ex?usp=sharing',
-            'image' => null,
+            'image' => 'timun-mas.png',
         ],
         [
             'id' => 'susu-bahagia-ecommerce',
@@ -125,7 +125,7 @@ return [
             'technology' => ['Figma', 'Canva'],
             'description' => 'Designed an e-commerce website interface for Susu Bahagia, featuring customer-facing pages and an admin dashboard to support online shopping and store management.',
             'url' => 'https://www.figma.com/design/qaCbeJGGUpduSHZMG7PtuA/TOKO-SUSU-BAHAGIA?node-id=0-1&t=HfEa0QoxPSNPd0kd-1',
-            'image' => null,
+            'image' => 'toko-susu.png',
         ],
         [
             'id' => 'arabic-sign-language-recognition',
@@ -134,7 +134,7 @@ return [
             'technology' => ['Python', 'MobileNetV2', 'VS Code'],
             'description' => 'Developed a machine learning model using MobileNetV2 to recognize Arabic sign language hand gestures, helping users learn Hijaiyah letters through gesture recognition.',
             'url' => 'https://drive.google.com/drive/folders/1p6aV_S_iErL1fNpp_VtJjF63dwavtsXH?usp=sharing',
-            'image' => null,
+            'image' => 'arabic.png',
         ],
         [
             'id' => 'connection-bracelet-barcode',
@@ -143,7 +143,7 @@ return [
             'technology' => ['HTML', 'CSS', 'VS Code'],
             'description' => 'Developed and hosted a customized barcode-based website for a bracelet project, with an interface designed to meet client requirements.',
             'url' => 'https://drive.google.com/drive/folders/1PQF4fbMcszSBvH6JX09Glwivohueawtd?usp=sharing',
-            'image' => null,
+            'image' => 'connection.png',
         ],
         [
             'id' => 'shawarma-station',
@@ -152,7 +152,7 @@ return [
             'technology' => ['Figma', 'Canva'],
             'description' => 'Designed a restaurant website interface for Shawarma Station, including customer-facing pages and an admin dashboard to support restaurant management.',
             'url' => 'https://www.figma.com/design/TfYaJ0Kli4mq0FfuQWxzct/Shawarma-Station?node-id=0-1&t=DNWsnOxv1vFTz2zV-1',
-            'image' => null,
+            'image' => 'shawarma.png',
         ],
         [
             'id' => 'pandu-application',
@@ -161,7 +161,7 @@ return [
             'technology' => ['Blender', 'Unity', 'Augmented Reality'],
             'description' => 'Created 3D models using Blender for Pandu, an augmented reality application designed to help users learn about Pancasila. Users can scan images to display 3D objects accompanied by written or audio explanations.',
             'url' => 'https://drive.google.com/drive/folders/1XM4Of2yU7jysFILnOC0HaWCrhv6ZvJBm?usp=sharing',
-            'image' => null,
+            'image' => 'pandu.png',
         ],
         [
             'id' => 'verdant-restaurant',
@@ -170,7 +170,7 @@ return [
             'technology' => ['Figma', 'Canva'],
             'description' => 'Designed a restaurant website interface for Verdant Cafe, featuring a QR code-based ordering system that allows customers to browse the menu and place food orders digitally.',
             'url' => 'https://www.figma.com/design/8H6YImAtVCT5AYeV7fD5Ns/Verdant-UI?node-id=0-1&t=tuWYtXoiAfQKskjc-1',
-            'image' => null,
+            'image' => 'verdant.png',
         ],
         [
             'id' => 'fastplanner',
@@ -179,7 +179,7 @@ return [
             'technology' => ['Figma', 'Canva'],
             'description' => 'Designed web and mobile application interfaces for FastPlanner to help users plan and manage their intermittent fasting (IF) routines.',
             'url' => 'https://www.figma.com/design/lBTVzvfUUrB5r4own593Ar/FASTPLANNER?node-id=0-1&t=mHZtD57MCRw776CW-1',
-            'image' => null,
+            'image' => 'fastplanner.png',
         ],
     ],
 

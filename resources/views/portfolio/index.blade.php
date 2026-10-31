@@ -337,7 +337,7 @@
                                     <img 
                                         src="{{ asset('images/projects/' . $project['image']) }}" 
                                         alt="{{ $project['title'] }}" 
-                                        class="w-full h-full object-cover"
+                                        class="w-full h-full object-cover object-top"
                                         loading="lazy"
                                     >
                                 @else
