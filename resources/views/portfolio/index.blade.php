@@ -536,7 +536,7 @@
 
         <div class="relative z-10 grid grid-cols-1 md:grid-cols-3 gap-5 w-full">
             @foreach($portfolio['skills'] as $index => $category)
-                <div class="clean-card rounded-3xl p-6 flex flex-col bg-white border border-[#B9C8E8]/35">
+                <div class="clean-card rounded-3xl p-5 sm:p-6 flex flex-col justify-start bg-white border border-[#B9C8E8]/35 h-full">
                     {{-- Card header --}}
                     <div class="flex items-center gap-2.5 mb-2">
                         <div class="w-8 h-8 rounded-xl bg-[#FFF9E9] text-[#1F3D2B] border border-[#F2D887]/50 flex items-center justify-center font-bold text-sm shadow-2xs shrink-0">
@@ -546,24 +546,25 @@
                             {{ $category['category'] }}
                         </h3>
                     </div>
-                    <p class="text-xs text-stone-500 font-medium leading-relaxed mb-4">
+                    <p class="text-xs text-stone-500 font-medium leading-relaxed mb-4 min-h-[36px]">
                         {{ $category['description'] }}
                     </p>
 
-                    {{-- Tool items --}}
-                    <div class="flex flex-col gap-2">
+                    {{-- Tool items: 2-column grid directly positioned below description --}}
+                    <div class="grid grid-cols-2 gap-2.5">
                         @foreach($category['items'] as $item)
-                            <div class="flex items-center gap-2.5 p-2 rounded-xl bg-[#FFFDF7] border border-[#B9C8E8]/35 hover:border-[#F2D887] hover:bg-[#FFF9E9] hover:shadow-2xs transition-all">
-                                <div class="w-7 h-7 rounded-md bg-white border border-[#B9C8E8]/30 flex items-center justify-center shrink-0 shadow-2xs p-0.5">
+                            <div class="flex flex-col items-center justify-center p-3 rounded-2xl bg-[#FFFDF7] border border-[#B9C8E8]/35 hover:border-[#F2D887] hover:bg-[#FFF9E9] hover:shadow-2xs transition-all text-center min-h-[92px]">
+                                <div class="w-8 h-8 rounded-lg bg-white border border-[#B9C8E8]/30 flex items-center justify-center shadow-2xs p-1 mb-1.5 shrink-0">
                                     <img
                                         src="{{ asset('images/tools/' . $item['logo']) }}"
                                         alt="{{ $item['name'] }} logo"
                                         width="24"
                                         height="24"
-                                        class="w-[22px] h-[22px] object-contain"
+                                        class="w-6 h-6 object-contain"
+                                        loading="lazy"
                                     />
                                 </div>
-                                <span class="text-xs font-bold text-[#1F3D2B] leading-snug">
+                                <span class="text-xs font-bold text-[#1F3D2B] leading-tight line-clamp-2">
                                     {{ $item['name'] }}
                                 </span>
                             </div>

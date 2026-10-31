@@ -55,8 +55,11 @@ return [
             'description' => 'Building responsive web applications and managing relational databases.',
             'items' => [
                 ['name' => 'Laravel', 'logo' => 'laravel.svg'],
-                ['name' => 'HTML5, CSS3 & JavaScript', 'logo' => 'html5.svg'],
-                ['name' => 'Bootstrap & Tailwind CSS', 'logo' => 'bootstrap.svg'],
+                ['name' => 'HTML5', 'logo' => 'html5.svg'],
+                ['name' => 'CSS3', 'logo' => 'css3.svg'],
+                ['name' => 'JavaScript', 'logo' => 'javascript.svg'],
+                ['name' => 'Bootstrap', 'logo' => 'bootstrap.svg'],
+                ['name' => 'Tailwind CSS', 'logo' => 'tailwindcss.svg'],
                 ['name' => 'MySQL', 'logo' => 'mysql.svg'],
             ],
         ],
