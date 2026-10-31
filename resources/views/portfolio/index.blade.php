@@ -534,72 +534,40 @@
             </p>
         </div>
 
-        @php
-            $skillToolLogos = [
-                // 1. Laravel – official flame logo (Simple Icons)
-                'Laravel' => '<svg class="w-4 h-4" viewBox="0 0 24 24" fill="#FF2D20"><path d="M23.642 5.43a.364.364 0 0 1 .014.1v5.149c0 .135-.073.26-.189.326l-4.323 2.49v4.934a.378.378 0 0 1-.188.326L9.93 23.949a.316.316 0 0 1-.066.027.299.299 0 0 1-.1.017.283.283 0 0 1-.1-.02.29.29 0 0 1-.066-.024L.531 18.755a.376.376 0 0 1-.188-.326V2.974c0-.038.005-.073.014-.108a.337.337 0 0 1 .014-.073.368.368 0 0 1 .038-.067l.023-.032a.366.366 0 0 1 .053-.045.327.327 0 0 1 .03-.022L5.062.189a.379.379 0 0 1 .378 0l4.48 2.585a.375.375 0 0 1 .048.032.344.344 0 0 1 .052.046l.024.031a.364.364 0 0 1 .04.067.333.333 0 0 1 .012.072c.01.036.014.073.013.11v9.638l3.76-2.168V5.43c0-.037.003-.073.012-.108a.366.366 0 0 1 .013-.073.376.376 0 0 1 .039-.067l.024-.031a.388.388 0 0 1 .051-.045.362.362 0 0 1 .031-.022l4.479-2.584a.379.379 0 0 1 .378 0l4.48 2.584a.356.356 0 0 1 .031.022.388.388 0 0 1 .051.045l.023.031a.376.376 0 0 1 .04.067c.007.022.01.047.012.072zm-.74 5.013V6.232l-1.57.905-2.192 1.264v4.21zm-4.856 8.33v-4.21l-2.162 1.244-6.16 3.528v4.25zM1.126 3.2v15.354l8.322 4.802v-4.25l-4.35-2.476a.372.372 0 0 1-.053-.035.362.362 0 0 1-.046-.05l-.025-.035a.383.383 0 0 1-.035-.07.308.308 0 0 1-.01-.07.354.354 0 0 1-.007-.068V7.58zm4.48-2.404L1.89 3.2l3.716 2.143 3.716-2.143zm4.48 7.65L6.37 6.302l-3.716 2.143 3.716 2.142zm-.376 1.002l-3.712-2.14v4.127l2.193 1.263 1.519.875zm8.322-8.654l-3.716 2.14 3.716 2.143 3.716-2.142zm-.376 4.283L14.44 8.935l-2.192-1.264v4.21l2.192 1.264 1.522.876zm4.48 2.584l-3.712-2.14v4.126l2.193 1.264 1.519.875z"/></svg>',
-
-                // 2. HTML5, CSS3 & JavaScript – HTML5 logo
-                'HTML5, CSS3 & JavaScript' => '<svg class="w-4 h-4" viewBox="0 0 24 24" fill="#E34F26"><path d="M1.5 0h21l-1.91 21.563L11.977 24l-8.564-2.438L1.5 0zm7.031 9.75l-.232-2.718 10.059-.003.236-2.671H5.408l.707 8.063h9.013l-.332 3.738-2.818.761-2.825-.76-.182-2.039H6.287l.352 4.414 5.34 1.482 5.344-1.482.73-8.283H8.531z"/></svg>',
-
-                // 3. Bootstrap & Tailwind CSS – Bootstrap B logo
-                'Bootstrap & Tailwind CSS' => '<svg class="w-4 h-4" viewBox="0 0 24 24" fill="#7952B3"><path d="M6.375 7.5C6.375 5.085 8.085 3 10.5 3h3.375C16.29 3 18 4.71 18 6.75c0 1.185-.555 2.25-1.44 2.94.975.63 1.62 1.74 1.62 3.06 0 2.07-1.8 3.75-3.93 3.75H10.5C8.085 16.5 6.375 14.415 6.375 12V7.5zM10.5 9.75h3.375c.69 0 1.125-.435 1.125-1.125C15 7.935 14.565 7.5 13.875 7.5H10.5v2.25zm0 2.25v2.25h4.125c.735 0 1.125-.435 1.125-1.125S15.36 12 14.625 12H10.5z"/></svg>',
-
-                // 4. MySQL – official MySQL dolphin logo
-                'MySQL' => '<svg class="w-4 h-4" viewBox="0 0 24 24" fill="#4479A1"><path d="M16.564 7.64c-.207-.549-.575-.97-1.077-1.222-.497-.249-1.097-.306-1.742-.167a5.57 5.57 0 0 0-1.84 1.026c-.53.453-.94.996-1.196 1.583-.244.561-.318 1.155-.224 1.722.096.577.382 1.095.82 1.488.423.38.96.612 1.543.664.577.051 1.18-.084 1.723-.393a5.54 5.54 0 0 0 1.547-1.428c.394-.559.61-1.198.625-1.838a2.91 2.91 0 0 0-.179-1.435zM12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm7.848 15.688c-.378.854-.972 1.573-1.71 2.067-.736.494-1.597.747-2.483.729-.877-.019-1.725-.308-2.434-.828a5.558 5.558 0 0 1-1.683-2.023 5.485 5.485 0 0 1-.486-2.57c.073-.889.39-1.729.907-2.428.514-.694 1.206-1.218 2.001-1.503.784-.282 1.628-.317 2.436-.102.801.212 1.517.659 2.052 1.282.527.614.856 1.37.94 2.164.085.807-.076 1.616-.452 2.327-.145.275-.326.529-.536.756.242.096.496.166.757.208.384.062.776.046 1.15-.049a2.76 2.76 0 0 0 .977-.487c.219-.174.402-.387.538-.631.144-.258.216-.549.212-.843a2.03 2.03 0 0 0-.276-1.026 3.036 3.036 0 0 0-.74-.848c-.08-.063-.097-.179-.039-.263.058-.084.172-.104.258-.046.31.207.574.484.773.81.2.33.298.705.286 1.087a2.53 2.53 0 0 1-.268 1.077 3.3 3.3 0 0 1-.676.812 3.27 3.27 0 0 1-1.185.599 4.14 4.14 0 0 1-1.425.071 4.54 4.54 0 0 1-1.348-.415z"/></svg>',
-
-                // 5. Figma – official multi-color logo (Simple Icons)
-                'Figma' => '<svg class="w-4 h-4" viewBox="0 0 24 24" fill="none"><path d="M8 24c2.2 0 4-1.8 4-4v-4H8c-2.2 0-4 1.8-4 4s1.8 4 4 4z" fill="#0ACF83"/><path d="M4 12c0-2.2 1.8-4 4-4h4v8H8c-2.2 0-4-1.8-4-4z" fill="#A259FF"/><path d="M4 4c0-2.2 1.8-4 4-4h4v8H8C5.8 8 4 6.2 4 4z" fill="#F24E1E"/><path d="M12 0h4c2.2 0 4 1.8 4 4s-1.8 4-4 4h-4V0z" fill="#FF7262"/><path d="M20 12c0 2.2-1.8 4-4 4s-4-1.8-4-4 1.8-4 4-4 4 1.8 4 4z" fill="#1ABCFE"/></svg>',
-
-                // 6. Draw.io – official Diagrams.net logo
-                'Draw.io' => '<svg class="w-4 h-4" viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="7" height="7" rx="1.5" fill="#F08705"/><rect x="14" y="14" width="7" height="7" rx="1.5" fill="#F08705"/><path d="M10 6.5h7a1 1 0 0 1 1 1V14M6.5 10v7a1 1 0 0 0 1 1H14" stroke="#F08705" stroke-width="1.8" stroke-linecap="round"/></svg>',
-
-                // 7. Canva – official Canva logo
-                'Canva' => '<svg class="w-4 h-4" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" fill="#00C4CC"/><path d="M15.5 14.5c-.8.8-1.9 1.2-3.1 1.2-2.5 0-4.4-1.8-4.4-4.5 0-2.6 1.9-4.5 4.5-4.5 1.1 0 2.1.4 2.8 1.1l-1.2 1.3c-.4-.4-1-.7-1.6-.7-1.6 0-2.8 1.3-2.8 2.8s1.2 2.8 2.8 2.8c.7 0 1.3-.3 1.7-.7l1.3 1.2z" fill="#fff"/></svg>',
-
-                // 8. Visual Studio Code – official VS Code logo
-                'Visual Studio Code' => '<svg class="w-4 h-4" viewBox="0 0 24 24" fill="none"><path d="m17.5 2.1-10 7.7-4.8-3.7L1 7.2v9.6l1.7 1.1 4.8-3.7 10 7.7 5.5-2.6V4.7l-5.5-2.6zm-10 11.2L4.2 11l3.3-2.3v4.6zm10.7 4.1-7.2-5.4 7.2-5.4v10.8z" fill="#007ACC"/></svg>',
-
-                // 9. Google Antigravity – sparkle / AI star icon
-                'Google Antigravity' => '<svg class="w-4 h-4" viewBox="0 0 24 24" fill="none"><path d="M12 2l2.09 6.26L20.5 10l-6.41 1.74L12 18l-2.09-6.26L3.5 10l6.41-1.74L12 2z" fill="#1F3D2B"/><path d="M19 2l.94 2.81L22.75 6l-2.81.94L19 9.75l-.94-2.81L15.25 6l2.81-.94L19 2z" fill="#F2D887"/></svg>',
-
-                // 10. Git & GitHub – official Git logo
-                'Git & GitHub' => '<svg class="w-4 h-4" viewBox="0 0 24 24" fill="#F05032"><path d="M23.546 10.93L13.067.452a1.5 1.5 0 0 0-2.126 0L8.808 2.583l3.298 3.298a1.782 1.782 0 0 1 2.27 2.293L17.7 11.5a1.78 1.78 0 1 1-1.07.727L13.5 9.1v5.82a1.78 1.78 0 1 1-1.5 0V8.92a1.78 1.78 0 0 1-.954-2.336L7.744 3.282.454 10.57a1.5 1.5 0 0 0 0 2.126l10.48 10.48a1.5 1.5 0 0 0 2.126 0l10.486-10.12a1.5 1.5 0 0 0 0-2.126z"/></svg>',
-            ];
-            $defaultLogo = '<svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="#1F3D2B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>';
-        @endphp
-
         <div class="relative z-10 grid grid-cols-1 md:grid-cols-3 gap-5 w-full">
             @foreach($portfolio['skills'] as $index => $category)
-                <div class="clean-card rounded-3xl p-6 flex flex-col justify-between space-y-4 bg-white border border-[#B9C8E8]/35">
-                    <div class="space-y-3">
-                        <div class="flex items-center gap-2.5">
-                            <div class="w-8 h-8 rounded-xl bg-[#FFF9E9] text-[#1F3D2B] border border-[#F2D887]/50 flex items-center justify-center font-bold text-sm shadow-2xs">
-                                ✦
-                            </div>
-                            <h3 class="font-extrabold text-sm sm:text-base text-stone-900">
-                                {{ $category['category'] }}
-                            </h3>
+                <div class="clean-card rounded-3xl p-6 flex flex-col bg-white border border-[#B9C8E8]/35">
+                    {{-- Card header --}}
+                    <div class="flex items-center gap-2.5 mb-2">
+                        <div class="w-8 h-8 rounded-xl bg-[#FFF9E9] text-[#1F3D2B] border border-[#F2D887]/50 flex items-center justify-center font-bold text-sm shadow-2xs shrink-0">
+                            ✦
                         </div>
-                        <p class="text-xs text-stone-500 font-medium leading-relaxed">
-                            {{ $category['description'] }}
-                        </p>
+                        <h3 class="font-extrabold text-sm sm:text-base text-stone-900 leading-snug">
+                            {{ $category['category'] }}
+                        </h3>
+                    </div>
+                    <p class="text-xs text-stone-500 font-medium leading-relaxed mb-4">
+                        {{ $category['description'] }}
+                    </p>
 
-                        <div class="space-y-2 pt-1">
-                            @foreach($category['items'] as $item)
-                                @php
-                                    $logoSvg = $skillToolLogos[$item['name']] ?? $defaultLogo;
-                                @endphp
-                                <div class="flex items-center gap-2.5 p-2 rounded-xl bg-[#FFFDF7] border border-[#B9C8E8]/35 hover:border-[#F2D887] hover:bg-[#FFF9E9] hover:shadow-2xs transition-all text-xs">
-                                    <div class="w-6 h-6 rounded-md bg-white border border-[#B9C8E8]/30 flex items-center justify-center shrink-0 shadow-2xs">
-                                        {!! $logoSvg !!}
-                                    </div>
-                                    <span class="font-bold text-[#1F3D2B] leading-snug">
-                                        {{ $item['name'] }}
-                                    </span>
+                    {{-- Tool items --}}
+                    <div class="flex flex-col gap-2">
+                        @foreach($category['items'] as $item)
+                            <div class="flex items-center gap-2.5 p-2 rounded-xl bg-[#FFFDF7] border border-[#B9C8E8]/35 hover:border-[#F2D887] hover:bg-[#FFF9E9] hover:shadow-2xs transition-all">
+                                <div class="w-7 h-7 rounded-md bg-white border border-[#B9C8E8]/30 flex items-center justify-center shrink-0 shadow-2xs p-0.5">
+                                    <img
+                                        src="{{ asset('images/tools/' . $item['logo']) }}"
+                                        alt="{{ $item['name'] }} logo"
+                                        width="24"
+                                        height="24"
+                                        class="w-[22px] h-[22px] object-contain"
+                                    />
                                 </div>
-                            @endforeach
-                        </div>
+                                <span class="text-xs font-bold text-[#1F3D2B] leading-snug">
+                                    {{ $item['name'] }}
+                                </span>
+                            </div>
+                        @endforeach
                     </div>
                 </div>
             @endforeach
