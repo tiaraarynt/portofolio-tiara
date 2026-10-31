@@ -117,6 +117,7 @@ return [
             'description' => 'Developed a mobile augmented reality application that brings the Indonesian folktale Timun Mas to life. Users can scan different image markers to display 3D scenes that follow the storyline of Timun Mas.',
             'url' => 'https://drive.google.com/drive/folders/1ywydPBG5QtfNdO0Yv87SzW6b0tv5T7ex?usp=sharing',
             'image' => 'timun-mas.png',
+            'image_position' => 'center 20%',
         ],
         [
             'id' => 'susu-bahagia-ecommerce',
@@ -162,6 +163,7 @@ return [
             'description' => 'Created 3D models using Blender for Pandu, an augmented reality application designed to help users learn about Pancasila. Users can scan images to display 3D objects accompanied by written or audio explanations.',
             'url' => 'https://drive.google.com/drive/folders/1XM4Of2yU7jysFILnOC0HaWCrhv6ZvJBm?usp=sharing',
             'image' => 'pandu.png',
+            'image_position' => 'center 20%',
         ],
         [
             'id' => 'verdant-restaurant',

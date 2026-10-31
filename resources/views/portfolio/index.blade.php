@@ -337,7 +337,8 @@
                                     <img 
                                         src="{{ asset('images/projects/' . $project['image']) }}" 
                                         alt="{{ $project['title'] }}" 
-                                        class="w-full h-full object-cover object-top"
+                                        class="w-full h-full object-cover {{ !empty($project['image_position']) ? '' : 'object-top' }}"
+                                        @if(!empty($project['image_position'])) style="object-position: {{ $project['image_position'] }};" @endif
                                         loading="lazy"
                                     >
                                 @else
