@@ -584,7 +584,11 @@
                 </span>
                 <span class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#FFF9E9] text-[#1F3D2B] text-xs sm:text-sm font-bold border border-[#F2D887]/50 shadow-2xs hover:border-[#B9C8E8] hover:bg-[#EDF2FA] transition-all">
                     <span class="w-1.5 h-1.5 rounded-full bg-[#F2D887] ring-2 ring-[#B9C8E8]/60"></span>
-                    Effective Communication
+                    Communication
+                </span>
+                <span class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#FFF9E9] text-[#1F3D2B] text-xs sm:text-sm font-bold border border-[#F2D887]/50 shadow-2xs hover:border-[#B9C8E8] hover:bg-[#EDF2FA] transition-all">
+                    <span class="w-1.5 h-1.5 rounded-full bg-[#F2D887] ring-2 ring-[#B9C8E8]/60"></span>
+                    Adaptability
                 </span>
                 <span class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#FFF9E9] text-[#1F3D2B] text-xs sm:text-sm font-bold border border-[#F2D887]/50 shadow-2xs hover:border-[#B9C8E8] hover:bg-[#EDF2FA] transition-all">
                     <span class="w-1.5 h-1.5 rounded-full bg-[#F2D887] ring-2 ring-[#B9C8E8]/60"></span>
@@ -592,11 +596,15 @@
                 </span>
                 <span class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#FFF9E9] text-[#1F3D2B] text-xs sm:text-sm font-bold border border-[#F2D887]/50 shadow-2xs hover:border-[#B9C8E8] hover:bg-[#EDF2FA] transition-all">
                     <span class="w-1.5 h-1.5 rounded-full bg-[#F2D887] ring-2 ring-[#B9C8E8]/60"></span>
-                    Adaptive &amp; Fast Learner
+                    Project &amp; Time Management
                 </span>
                 <span class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#FFF9E9] text-[#1F3D2B] text-xs sm:text-sm font-bold border border-[#F2D887]/50 shadow-2xs hover:border-[#B9C8E8] hover:bg-[#EDF2FA] transition-all">
                     <span class="w-1.5 h-1.5 rounded-full bg-[#F2D887] ring-2 ring-[#B9C8E8]/60"></span>
-                    Project &amp; Time Management
+                    Critical Thinking
+                </span>
+                <span class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#FFF9E9] text-[#1F3D2B] text-xs sm:text-sm font-bold border border-[#F2D887]/50 shadow-2xs hover:border-[#B9C8E8] hover:bg-[#EDF2FA] transition-all">
+                    <span class="w-1.5 h-1.5 rounded-full bg-[#F2D887] ring-2 ring-[#B9C8E8]/60"></span>
+                    Attention to Detail
                 </span>
             </div>
         </div>
