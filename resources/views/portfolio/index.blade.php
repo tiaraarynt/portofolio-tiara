@@ -234,7 +234,7 @@
 
         <div class="relative z-10 flex items-center justify-between gap-3 border-b border-[#B9C8E8]/35 pb-3">
             <div class="min-w-0 flex-1">
-                <h2 class="text-xl sm:text-2xl lg:text-3xl font-extrabold text-stone-900 tracking-tight truncate">
+                <h2 class="text-xl sm:text-2xl lg:text-3xl font-extrabold text-stone-900 tracking-tight leading-tight">
                     Work &amp; Internship Experience
                 </h2>
             </div>
