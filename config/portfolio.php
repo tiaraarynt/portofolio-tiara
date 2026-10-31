@@ -244,7 +244,7 @@ return [
         [
             'period' => 'Aug 2022 — Aug 2026',
             'degree' => 'Bachelor of Applied Science in Software Engineering Technology',
-            'institution' => 'IPB University (Bogor Agricultural University)',
+            'institution' => 'IPB University',
             'location' => 'Bogor, Indonesia',
             'badge' => 'GPA 3.50 / 4.00',
             'description' => '',
